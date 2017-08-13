@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<link rel="stylesheet" href="http://code.ionicframework.com/1.0.0/css/ionic.css" />
+    	<script src="http://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
+    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+    	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                #####script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'  ; img-src * 会导致图片加载不了
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>        
+    </head>
+    <body>
+    
+		<div data-role="page" id="home">
+			<div data-role="header" data-id="navbar" data-position=“fixed”>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home">Home Page</a> </li>
+						<li><a href="#spList">Shop List</a></li>
+                        <li><a href="#spCart">Cart</a>
+                            <span id="Counter1" class="ui-li-count" display="block">0</span></li>
+					</ul>
+				</div>				
+			</div>
+
+			<div data-role="content">
+				<p>Welcome to home page.</p>
+			</div>
+
+			<div data-role="footer">
+				<h4>Copyright Reserved, RCIM LAB@Uwindsor</h4>
+			</div>
+		</div>
+
+        
+        <div data-role="page" id="spList">
+            <div data-role="header" data-id="navbar" data-position=“fixed”>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home">Home Page</a> </li>
+                        <li><a href="#spList">Shop List</a></li>
+                        <li><a href="#spCart">Cart</a>
+                            <span id="Counter2" class="ui-li-count" display="block">0</span><i id="end"></i></li>
+                    </ul>
+                </div>              
+            </div>
+            <div data-role="content" >
+
+                <div data-product="1001" class="product" align="center">
+                    <img class="proPic" src="./img/WechatIMG21.jpeg"  />
+                    <span data-name="GalaxyA5"></span>
+                    <span data-price="524.75"></span>
+                    <span data-image="./img/WechatIMG21.jpeg"></span>
+                </div>
+                <div data-product="1002" class="product" align="center">
+                    <img class="proPic" src="./img/WechatIMG22.jpeg"  />
+                    <span data-name="clji"></span>
+                    <span data-price="579"></span>
+                    <span data-image="./img/WechatIMG22.jpeg"></span>
+                </div>
+                <div data-product="1003" class="product" align="center">
+                    <img class="proPic"  src="./img/WechatIMG23.jpeg"  />
+                    <span data-name="HP-P500"></span>
+                    <span data-price="29.98"></span>
+                    <span data-image="./img/WechatIMG23.jpeg"></span>
+                </div>
+                <div data-product="1004" class="product" align="center">
+                    <img class="proPic"  src="./img/WechatIMG24.jpeg"  />
+                    <span data-name="PAPACO"></span>
+                    <span data-price="49.22"></span>
+                    <span data-image="./img/WechatIMG24.jpeg"></span>
+                </div>                               
+            </div>
+            <div data-role="footer">
+                <h4>Copyright Reserved, RCIM LAB@Uwindsor</h4>
+            </div>
+        </div>
+
+
+        <div data-role="page" id="spCart">
+            <div data-role="header" data-id="navbar" data-position=“fixed” >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home">Home Page</a></li>
+                        <li><a href="#spList">Shop List</a></li>
+                        <li><a href="#spCart">Cart</a>
+                            <span id="Counter3" class="ui-li-count" display="block">0</span></li>
+                    </ul>
+                </div>              
+            </div>
+
+            <div data-role="content">
+                <div id="cartDIV">
+                    EMPTY!
+                </div>
+            </div>
+
+            <div data-role="footer">
+                <h4>Copyright Reserved, RCIM LAB@Uwindsor</h4>
+            </div>
+        </div>
+        <!-- 到此，调试图片点击效果的显示函数。嵌入式Javascript脚本的问题，已经解决 -->
+        <script type="text/javascript">
+            var cart = [];
+            var count = 0;
+            function refreshCnt(cnt){
+                $("#Counter1").text(String(cnt));
+                $("#Counter2").text(String(cnt));
+                $("#Counter3").text(String(cnt));
+            }
+
+            function flyTocart(imgPath){
+                var offset = $("#end").offset();
+                var flyer = $('<img class="u-flyer" src="'+imgPath+'">'); 
+                    flyer.fly({ 
+                        start: { 
+                            left: event.pageX, //开始位置（必填）#fly元素会被设置成position: fixed 
+                            top: event.pageY //开始位置（必填） 
+                        }, 
+                        end: { 
+                            left: offset.left+100, //结束位置（必填） 
+                            top: offset.top-5, //结束位置（必填） 
+                            width: 3, //结束时宽度 
+                            height: 3 //结束时高度 
+                        }, 
+                        onEnd: function(){ //结束回调 
+                            this.destory(); //移除dom 
+                        } 
+                    }); 
+
+
+            } 
+
+            function refreshCart(){
+                $("#cartDIV").html("");
+                console.log("in refreshCart.");  
+
+                $(".product.selected").each(function(){
+                    // console.log("data-product-selected.");
+                    var newDiv=$(this).clone(true);
+                    newDiv.unbind("click");
+                    var newimg=newDiv.find("img");
+                    newimg.removeAttr("class");
+                    // var newspan=newDiv.find("span")[0];
+                    // newspan.unbind("click");
+                    $("#cartDIV").append(newDiv);
+
+                });
+
+            }
+
+
+            $(document).ready(function(){
+                if (jQuery) { 
+                    console.log("jQuery has been loaded.");        
+                } else { 
+                    console.log("jQuery has not been loaded.");   
+                }; 
+                $("#cartDIV").html("");
+                // .class类对象选择器，#id选择器，$(p)元素选择器, 组合选择器
+                $("img.proPic").imgCheckbox({"scaleSelected":false},{"checkMarkImage":"img/SelectedPic.jpg"},{"checkMarkPosition":"top-right"});
+
+                // function 1
+                $(".product").on("click",function(event){ 
+                    if (!!$(this).hasClass("selected")) {
+                        $(this).removeClass("selected");
+                        count = count - 1;
+                        // console.log(count);
+                        refreshCnt(count);
+                        refreshCart();
+
+
+                    } else{
+                        $(this).addClass("selected");
+                        count = count + 1;
+                        // console.log(count);
+                        refreshCnt(count);
+                        //find只找匹配项下面的子项
+                        var imgPath = $(this).find('img').attr('src'); 
+                        console.log(imgPath);
+                        flyTocart(imgPath);
+                        refreshCart();
+
+                    };
+
+                })
+
+
+            })
+
+
+        </script>        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script> 
+        <script type="text/javascript" src="js/jquery.imgcheckbox.js"></script> 
+        <script type="text/javascript" src="js/jquery.fly.min.js"></script> 
+    </body>
+</html>
+
+

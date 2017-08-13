@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                #####script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'  ; 
+                #####img-src * (resulting in loading picture error) 
+        -->
+        <meta charset="utf-8">
+<!--         <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'; media-src *"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <title>App Using Bootstrap</title>
+        <!--  For Bootstrap -->
+        <link rel="stylesheet" href="themes/Bootstrap.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!--  For shopping cart -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script> 
+        <script type="text/javascript" src="js/jquery.imgcheckbox.js"></script> 
+        <script type="text/javascript" src="js/jquery.fly.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I&libraries=places"></script>
+<!--         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I&libraries=places" async defer></script> -->
+    </head>
+    <body>
+
+		<div data-role="page" id="Home" data-theme="e">
+			<div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+				<div data-role="navbar">
+					<ul>
+                        <li><a href="#Home" data-icon="home" class="ui-btn-active">HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" >NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" >Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" >Search</a></li>
+					</ul>
+				</div>				
+			</div>
+
+			<div data-role="content" data-theme="e">
+				<p>Welcome to home page.</p>
+			</div>
+
+			<div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter1" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>            
+			</div>
+		</div>
+
+        
+        <div data-role="page" id="NBList" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#Home" data-icon="home" >HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" class="ui-btn-active">NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" >Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" >Search</a></li>
+                    </ul>
+                </div>              
+            </div>
+            <div data-role="content" >
+                <div id="map_canvas" style="height:100px;width:100%"></div>
+                <!-- <img src="./img/googleMap.jpeg" align="center" width="100%" /> --> 
+                <label id="map_debug"></label>
+                <p>NEARBY FLYERS </p>
+                    <div>
+                        <div align="center" >                            
+                            <a href="#proDetail" ><img class="coverPic" src="./img/coverPics/covPic1.jpg" width="30%" /> </a>
+                            <a href="#proDetail" ><img class="coverPic" src="./img/coverPics/covPic2.jpg" width="30%" /> </a>
+                            <a href="#proDetail" ><img class="coverPic" src="./img/coverPics/covPic2.jpg" width="30%" /> </a>
+                        </div>                      
+                    </div>
+            </div>
+            <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter2" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>                          
+            </div>
+        </div>
+
+
+        <div data-role="page" id="Favourate" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#Home" data-icon="home" >HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" >NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" class="ui-btn-active">Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" >Search</a></li>
+                    </ul>
+                </div>              
+            </div>
+
+            <div data-role="content" data-theme="e">
+                <p>Welcome to favourate page.</p>
+            </div>
+
+            <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter3" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>            
+            </div>
+        </div>
+
+        <div data-role="page" id="Search" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#Home" data-icon="home" >HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" >NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" >Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" class="ui-btn-active">Search</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="content" data-theme="e">
+                <p>Welcome to search page.</p>
+            </div>
+
+            <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter4" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>            
+            </div>
+        </div>
+
+
+        <div data-role="page" id="spCart" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#Home" data-icon="home" >HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" >NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" >Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" >Search</a></li>
+                    </ul>
+                </div>              
+            </div>
+
+            <div data-role="content">
+                <div id="cartDIV">
+                    EMPTY!
+                </div>
+            </div>
+
+            <div data-role="footer" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" >Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop" class="ui-btn-active">Cart
+                        <span id="Counter5" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>                                 
+            </div>
+        </div>
+
+
+        <div data-role="page" id="proDetail" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#NBList" data-icon="back" class="ui-btn-active" align="left">Back</a></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+
+                    </ul>
+                </div>              
+            </div>
+            <div data-role="content" >
+                    <div class="proTable">
+                        <table border="0" cellspacing="1" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="topRow">Shoppers Drug Mart</td>
+                            </tr>
+                            <tr>
+                              <td class="contentRow"> 
+
+                                 <table>
+                                    <tr>
+                                        <td>
+                                            <div data-product="1001" class="product" >
+                                                <img class="proPic" src="./img/detailPics/WechatIMG21.jpeg" width="80%" />
+                                                <span data-name="GalaxyA5"></span>
+                                                <span data-price="524.75"></span>
+                                                <span data-image="./img/WechatIMG21.jpeg"></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div data-product="1002" class="product" >
+                                                <img class="proPic" src="./img/detailPics/WechatIMG22.jpeg" width="80%"/>
+                                                <span data-name="clji"></span>
+                                                <span data-price="579"></span>
+                                                <span data-image="./img/WechatIMG22.jpeg"></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div data-product="1003" class="product" >
+                                                <img class="proPic"  src="./img/detailPics/WechatIMG23.jpeg" width="80%"/>
+                                                <span data-name="HP-P500"></span>
+                                                <span data-price="29.98"></span>
+                                                <span data-image="./img/WechatIMG23.jpeg"></span>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div data-product="1004" class="product"  >
+                                                <img class="proPic"  src="./img/detailPics/WechatIMG24.jpeg" width="80%"/>
+                                                <span data-name="PAPACO"></span>
+                                                <span data-price="49.22"></span>
+                                                <span data-image="./img/WechatIMG24.jpeg"></span>
+                                            </div> 
+
+                                        </td>
+                                        <td>
+                                            <div data-product="1005" class="product" >
+                                                <img class="proPic" src="./img/detailPics/WechatIMG21.jpeg" width="80%" />
+                                                <span data-name="GalaxyA5New"></span>
+                                                <span data-price="524.75"></span>
+                                                <span data-image="./img/WechatIMG21.jpeg"></span>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div data-product="1006" class="product">
+                                                <img class="proPic" src="./img/detailPics/WechatIMG22.jpeg" width="80%"/>
+                                                <span data-name="clji222"></span>
+                                                <span data-price="579"></span>
+                                                <span data-image="./img/WechatIMG22.jpeg"></span>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </table> 
+
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="bottomRow"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+
+            </div>
+            <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter6" class="ui-li-count" display="block">0</span><i id="end"></i></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>                          
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var count = 0;
+            var appDB;
+            var currentLocation;
+            var map;
+            var service;
+            var infowindow=[];
+            var marker=[];
+            var placeFound=[];
+            var placeCount=0;
+
+            function resizeMap() {
+                // $("#map_debug").html("<h3>Debugs: resizing map height...</h3>");                
+                $("#map_canvas").attr("style","height:300px;width:100%");
+
+            }
+
+            function getCurrentLocation() {
+
+                if (navigator.geolocation) {
+                    $("#map_debug").html("<h3>Debugs: start to get the currentLocation.</h3>");
+
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        currentLocation = {
+                          lat: position.coords.latitude,
+                          lng: position.coords.longitude
+                        };
+                        // $("#map_debug").html("Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude );
+                        $("#map_debug").html("Latitude: " + currentLocation.lat + "<br>Longitude: " + currentLocation.lng );
+
+                    }, function(error) {
+                    switch(error.code) {
+                        case error.PERMISSION_DENIED:
+                            $("#map_debug").html("User denied the request for Geolocation.");
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            $("#map_debug").html("Location information is unavailable.");
+                            break;
+                        case error.TIMEOUT:
+                            $("#map_debug").html("The request to get user location timed out.");
+                            break;
+                        case error.UNKNOWN_ERROR:
+                            $("#map_debug").html("An unknown error occurred.");
+                            break;
+                    }                    
+                    // handleLocationError(true, infoWindow, map.getCenter());
+                    });
+                } else {
+                  // Browser doesn't support Geolocation
+                  $("#map_debug").html("<h3>Error: Your browser/device doesn\'t support geolocation.</h3>"); 
+
+                }
+
+            }
+
+
+            function createMarker(place,placeNUM) {
+                $("#map_debug").html("<h3>Debugs: initiating the createMarker...</h3>");  
+                // var placeLoc = place.geometry.location;
+                // storing the found places for futrue use, like obtaining its detail info and storing into database
+                var photos = place.photos;
+                  if (!photos) {
+                    return;
+                };
+                placeFound[placeNUM]=place;
+                placeCount=placeNUM+1;
+                marker[placeNUM] = new google.maps.Marker({
+                  map: map,
+                  position: place.geometry.location,
+                  title: place.name,
+                  icon: photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35})
+                });
+                infowindow[placeNUM] = new google.maps.InfoWindow();
+                $("#map_debug").html("<h3>Debugs: initiating the clicking event for marker: </h3>" + String(placeNUM) + " " + place.name);                 
+                // google.maps.event.addListener(marker, 'click', function() {
+                //     infowindow.setContent(place.name);
+                //     infowindow.open(map, this);
+                //     $("#map_debug").html("<h3>Debugs: finishing the clicking event...</h3>"); 
+                // });
+
+                marker[placeNUM].addListener('click', function() {
+                    $("#map_debug").html("<h3>Debugs: clicking marker: </h3>" + String(placeNUM) + " " + place.name); 
+                    infowindow[placeNUM].setContent(place.name);
+                    infowindow[placeNUM].open(map, this);
+                });
+            }
+
+            function callback(results, status) {
+                $("#map_debug").html("<h3>Debugs: initiating the callback...</h3>");    
+                if (status == google.maps.places.PlacesServiceStatus.OK) {
+                    $("#map_debug").html("<h3>Debugs: Places Service Status OK...</h3>"); 
+                    for (var i = 0; i < results.length; i++) {
+                    createMarker(results[i],i);
+                  }
+                }; 
+                if (status == google.maps.places.PlacesServiceStatus.ERROR) {
+                    $("#map_debug").html("<h3>Debugs: Places Service Status: ERROR...</h3>"); 
+                    // for (var i = 0; i < results.length; i++) {
+                    // createMarker(results[i]);
+                    // }
+                };
+                if (status == google.maps.places.PlacesServiceStatus.INVALID_REQUEST) {
+                    $("#map_debug").html("<h3>Debugs: Places Service Status:  INVALID_REQUEST...</h3>"); 
+                };
+                if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
+                    $("#map_debug").html("<h3>Debugs: Places Service Status: OVER_QUERY_LIMIT...</h3>"); 
+                };
+
+                if (status == google.maps.places.PlacesServiceStatus.REQUEST_DENIED) {
+                    $("#map_debug").html("<h3>Debugs: Places Service Status:  REQUEST_DENIED...</h3>"); 
+                };
+
+                if (status == google.maps.places.PlacesServiceStatus.UNKNOWN_ERROR) {
+                    $("#map_debug").html("<h3>Debugs: Places Service Status:  UNKNOWN_ERROR...</h3>"); 
+                }; 
+                
+                if (status == google.maps.places.PlacesServiceStatus.ZERO_RESULTS) {
+                    $("#map_debug").html("<h3>Debugs: Places Service Status:  ZERO_RESULTS...</h3>"); 
+                };  
+
+
+            }
+
+
+            function initMap() {
+                //default location Innovation Center: {lat: 42.304672, lng: -83.062009}
+                $("#map_debug").html("<h3>Debugs: initiating the map...</h3>"); 
+                map = new google.maps.Map(document.getElementById('map_canvas'), {
+                  center: currentLocation,
+                  zoom: 12,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+                google.maps.event.addDomListener(window, "resize", function() {
+                    var center = map.getCenter();
+                    google.maps.event.trigger(map, "resize");
+                    map.setCenter(center); 
+                });
+                // infowindow = new google.maps.InfoWindow();
+                service = new google.maps.places.PlacesService(map);
+                var request = {
+                    location: currentLocation,
+                    radius: '500',
+                    query: 'restaurant'
+                };
+
+                service.textSearch(request, callback);                
+
+            }
+
+            
+            // function onMapReady() {
+            //     // Move to the position with animation
+            //     map.animateCamera({
+            //     target: {lat: 37.422359, lng: -122.084344},
+            //     zoom: 17,
+            //     tilt: 60,
+            //     bearing: 140,
+            //     duration: 5000
+            //     }, function() {
+
+            //     // Add a maker
+            //     map.addMarker({
+            //       position: {lat: 37.422359, lng: -122.084344},
+            //       title: "Welecome to \n" +
+            //              "Cordova GoogleMaps plugin for iOS and Android",
+            //       snippet: "This plugin is awesome!",
+            //       animation: plugin.google.maps.Animation.BOUNCE
+            //     }, function(marker) {
+
+            //       // Show the info window
+            //       marker.showInfoWindow();
+
+            //       // Catch the click event
+            //       marker.on(plugin.google.maps.event.INFO_CLICK, function() {
+
+            //         // To do something...
+            //         alert("Hello world!");
+
+            //       });
+            //     });
+            //     });
+
+            // }
+
+            $(document).on("pagecreate", "#NBList", function() {
+
+                // var div = document.getElementById("map_canvas");
+                // // Initialize the map view
+                // map = plugin.google.maps.Map.getMap(div);
+
+                // // Wait until the map is ready status.
+                // map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
+
+
+                //initiating googleMap
+                // console.log("initiating the google map...");
+
+                // if (currentLocation.lat!=null)&&(currentLocation.lng!=null) {
+                // await sleep(5000);
+                initMap();
+                // };
+
+            });
+
+            $(document).on("pagebeforeshow", "#NBList", function() {
+                resizeMap();
+            });
+
+            //After loading this HTML file, initiating the running environment
+            $(document).ready(function(){
+                if (jQuery) { 
+                    console.log("jQuery has been loaded.");        
+                } else { 
+                    console.log("jQuery has not been loaded.");   
+                }; 
+
+                $("#cartDIV").html("");
+                // .class--class selector, #id--id selector, $(p)--elements selector, img.proPic--combined selector
+                $("img.proPic").imgCheckbox({"scaleSelected":false},{"checkMarkImage":"img/SelectedPic.jpg"},{"checkMarkPosition":"top-right"});
+
+                // function 1: to adding the click event to .proPic
+                $(".proPic").on("click",function(event){ 
+                    if (!!$(this).hasClass("selected")) {
+                        $(this).removeClass("selected");
+                        count = count - 1;
+                        // console.log(count);
+                        refreshCnt(count);
+                        refreshCart();
+
+
+                    } else{
+                        $(this).addClass("selected");
+                        count = count + 1;
+                        // console.log(count);
+                        refreshCnt(count);
+                        //find只找匹配项下面的子项
+                        var imgPath = $(this).attr('src'); 
+                        console.log(imgPath);
+                        flyTocart(imgPath,event);                    
+                        refreshCart();
+
+                    };
+
+                });
+                getCurrentLocation();  //to get the currentLocation firstly
+
+                // function 2: creating, initiating, updating SQLite database 
+
+
+            })
+
+
+        </script> 
+        <!-- behind the initMap() function -->
+
+
+    </body>
+</html>
+
+

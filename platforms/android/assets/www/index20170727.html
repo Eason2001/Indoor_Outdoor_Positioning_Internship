@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                #####script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'  ; 
+                #####img-src * (resulting in loading picture error) 
+        -->
+        <meta charset="utf-8">
+<!--         <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'; media-src *"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <title>App Using Bootstrap</title>
+        <!--  For Bootstrap -->
+        <link rel="stylesheet" href="themes/Bootstrap.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!--  For shopping cart -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script> 
+        <script type="text/javascript" src="js/jquery.imgcheckbox.js"></script> 
+        <script type="text/javascript" src="js/jquery.fly.min.js"></script> 
+
+    </head>
+    <body>
+        
+		<div data-role="page" id="Home" data-theme="e">
+			<div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+				<div data-role="navbar">
+					<ul>
+                        <li><a href="#Home" data-icon="home" class="ui-btn-active">HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" >NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" >Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" >Search</a></li>
+					</ul>
+				</div>				
+			</div>
+
+			<div data-role="content" data-theme="e">
+				<p>Welcome to home page.</p>
+			</div>
+
+			<div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter1" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>            
+			</div>
+		</div>
+
+        
+        <div data-role="page" id="NBList" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#Home" data-icon="home" >HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" class="ui-btn-active">NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" >Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" >Search</a></li>
+                    </ul>
+                </div>              
+            </div>
+            <div data-role="content" >
+                <img src="./img/googleMap.jpeg" align="center" width="100%" />  <!-- need to integrate -->
+                <p>NEARBY FLYERS </p>
+                    <div>
+                        <div align="center" >                            
+                            <a href="#proDetail" ><img class="coverPic" src="./img/coverPics/covPic1.jpg" width="30%" /> </a>
+                            <a href="#proDetail" ><img class="coverPic" src="./img/coverPics/covPic2.jpg" width="30%" /> </a>
+                            <a href="#proDetail" ><img class="coverPic" src="./img/coverPics/covPic2.jpg" width="30%" /> </a>
+                        </div>                      
+                    </div>
+            </div>
+            <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter2" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>                          
+            </div>
+        </div>
+
+
+        <div data-role="page" id="Favourate" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#Home" data-icon="home" >HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" >NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" class="ui-btn-active">Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" >Search</a></li>
+                    </ul>
+                </div>              
+            </div>
+
+            <div data-role="content" data-theme="e">
+                <p>Welcome to favourate page.</p>
+            </div>
+
+            <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter3" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>            
+            </div>
+        </div>
+
+        <div data-role="page" id="Search" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#Home" data-icon="home" >HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" >NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" >Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" class="ui-btn-active">Search</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="content" data-theme="e">
+                <p>Welcome to search page.</p>
+            </div>
+
+            <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter4" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>            
+            </div>
+        </div>
+
+
+        <div data-role="page" id="spCart" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#Home" data-icon="home" >HomePage</a> </li>
+                        <li><a href="#NBList" data-icon="location" >NearBy</a></li>
+                        <li><a href="#Favourate" data-icon="star" >Favourate</a></li>
+                        <li><a href="#Search" data-icon="search" >Search</a></li>
+                    </ul>
+                </div>              
+            </div>
+
+            <div data-role="content">
+                <div id="cartDIV">
+                    EMPTY!
+                </div>
+            </div>
+
+            <div data-role="footer" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" >Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop" class="ui-btn-active">Cart
+                        <span id="Counter5" class="ui-li-count" display="block">0</span></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>                                 
+            </div>
+        </div>
+
+
+        <div data-role="page" id="proDetail" data-theme="e">
+            <div data-role="header" data-id="navbar" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#NBList" data-icon="back" class="ui-btn-active" align="left">Back</a></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+
+                    </ul>
+                </div>              
+            </div>
+            <div data-role="content" >
+                    <div class="proTable">
+                        <table border="0" cellspacing="1" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="topRow">Shoppers Drug Mart</td>
+                            </tr>
+                            <tr>
+                              <td class="contentRow"> 
+
+                                 <table>
+                                    <tr>
+                                        <td>
+                                            <div data-product="1001" class="product" >
+                                                <img class="proPic" src="./img/detailPics/WechatIMG21.jpeg" width="80%" />
+                                                <span data-name="GalaxyA5"></span>
+                                                <span data-price="524.75"></span>
+                                                <span data-image="./img/WechatIMG21.jpeg"></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div data-product="1002" class="product" >
+                                                <img class="proPic" src="./img/detailPics/WechatIMG22.jpeg" width="80%"/>
+                                                <span data-name="clji"></span>
+                                                <span data-price="579"></span>
+                                                <span data-image="./img/WechatIMG22.jpeg"></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div data-product="1003" class="product" >
+                                                <img class="proPic"  src="./img/detailPics/WechatIMG23.jpeg" width="80%"/>
+                                                <span data-name="HP-P500"></span>
+                                                <span data-price="29.98"></span>
+                                                <span data-image="./img/WechatIMG23.jpeg"></span>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div data-product="1004" class="product"  >
+                                                <img class="proPic"  src="./img/detailPics/WechatIMG24.jpeg" width="80%"/>
+                                                <span data-name="PAPACO"></span>
+                                                <span data-price="49.22"></span>
+                                                <span data-image="./img/WechatIMG24.jpeg"></span>
+                                            </div> 
+
+                                        </td>
+                                        <td>
+                                            <div data-product="1005" class="product" >
+                                                <img class="proPic" src="./img/detailPics/WechatIMG21.jpeg" width="80%" />
+                                                <span data-name="GalaxyA5New"></span>
+                                                <span data-price="524.75"></span>
+                                                <span data-image="./img/WechatIMG21.jpeg"></span>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div data-product="1006" class="product">
+                                                <img class="proPic" src="./img/detailPics/WechatIMG22.jpeg" width="80%"/>
+                                                <span data-name="clji222"></span>
+                                                <span data-price="579"></span>
+                                                <span data-image="./img/WechatIMG22.jpeg"></span>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </table> 
+
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="bottomRow"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+
+            </div>
+            <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
+                        <li><a href="#" data-icon="comment">Discount</a></li>
+                        <li><a href="#spCart" data-icon="shop">Cart
+                        <span id="Counter6" class="ui-li-count" display="block">0</span><i id="end"></i></a></li>
+                        <li><a href="#" data-icon="user">Account</a></li>
+                    </ul>
+                </div>                          
+            </div>
+        </div>
+
+
+        <!-- 到此，调试图片点击效果的显示函数。嵌入式Javascript脚本的问题，已经解决 -->
+        <script type="text/javascript">
+            var count = 0;
+            var appDB;
+            function refreshCnt(cnt){
+                $("#Counter1").text(String(cnt));
+                $("#Counter2").text(String(cnt));
+                $("#Counter3").text(String(cnt));
+                $("#Counter4").text(String(cnt));
+                $("#Counter5").text(String(cnt));
+                $("#Counter6").text(String(cnt));
+            }
+
+            function flyTocart(imgPath,event){
+                var offset = $("#end").offset();
+                var flyer = $('<img class="u-flyer" width="25%" src="'+imgPath+'" >'); 
+                    flyer.fly({ 
+                        start: { 
+                            left: event.pageX-30, //start to fly at X position(clicking position) 
+                            top: event.pageY-30 //start to fly at Y position(clicking position) 
+                        }, 
+                        end: { 
+                            left: offset.left-20, //end position X 
+                            top: offset.top+20, //end position Y 
+                            width: 15, //the ending width of picture
+                            height: 15 //the ending height of picture 
+                        }, 
+                        onEnd: function(){ //at the end 
+                            this.destory(); //destory the flyer 
+                        } 
+                    }); 
+
+            } 
+
+            function refreshCart(){
+                $("#cartDIV").html("");
+                console.log("in refreshCart.");  
+
+                $(".proPic.selected").each(function(){
+                    // console.log("data-product-selected.");
+                    var parentDiv=$(this).parent().parent();
+                    var newDiv=parentDiv.clone(true);
+
+                    console.log(parentDiv);
+
+                    newDiv.attr("style","float:left; display:inline")
+
+                    var newSpan=newDiv.find("span");  //findall span elements
+                    newSpan.removeAttr("class");
+                    newSpan.unbind("click");
+                    // newSpan.attr("style","display:none"); //hide the span
+
+                    var newimg=newDiv.find("img");
+                    newimg.removeAttr("class");
+                    newimg.attr("width","55%");
+                    newimg.unbind("click");
+                    // var newspan=newDiv.find("span")[0];
+                    // newspan.unbind("click");
+                    $("#cartDIV").append(newDiv);
+
+                });
+
+            }
+
+            // function CreatOpenDB(){
+            //     appDB = openDatabase('appDB', '1.0', 'Local_App_DB', 2 * 1024 * 1024);
+
+            // }
+
+            // function initiateDB(){
+            //     appDB.transaction(function (tx) {  
+            //        tx.executeSql('CREATE TABLE IF NOT EXISTS FLYERS(id unique, log)');
+            //        tx.executeSql('INSERT INTO LOGS (id,log) VALUES (?, ?'), [e_id, e_log];
+            //     });
+
+            // }
+
+
+            //After loading this HTML file, here is the entrance of JS
+            $(document).ready(function(){
+                if (jQuery) { 
+                    console.log("jQuery has been loaded.");        
+                } else { 
+                    console.log("jQuery has not been loaded.");   
+                }; 
+                $("#cartDIV").html("");
+                // .class类对象选择器，#id选择器，$(p)元素选择器, img.proPic组合选择器
+                $("img.proPic").imgCheckbox({"scaleSelected":false},{"checkMarkImage":"img/SelectedPic.jpg"},{"checkMarkPosition":"top-right"});
+
+                // function 1: to adding the click event to .proPic
+                $(".proPic").on("click",function(event){ 
+                    if (!!$(this).hasClass("selected")) {
+                        $(this).removeClass("selected");
+                        count = count - 1;
+                        // console.log(count);
+                        refreshCnt(count);
+                        refreshCart();
+
+
+                    } else{
+                        $(this).addClass("selected");
+                        count = count + 1;
+                        // console.log(count);
+                        refreshCnt(count);
+                        //find只找匹配项下面的子项
+                        var imgPath = $(this).attr('src'); 
+                        console.log(imgPath);
+                        flyTocart(imgPath,event);                    
+                        refreshCart();
+
+                    };
+
+                })
+
+                // function 2: creating, initiating, updating SQLite database 
+
+
+
+
+            })
+
+
+        </script>        
+
+    </body>
+</html>
+
+

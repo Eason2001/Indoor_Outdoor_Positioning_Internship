@@ -1,0 +1,1000 @@
+   34  git status
+   35  git fetch
+   36  git fetch
+   37  git pull
+   38  git push
+   39  git push origin master
+   40  git status
+   41  git fetch 
+   42  git pull
+   43  git status
+   44  git add *
+   45  git commit -m "update the changing password module"
+   46  git status
+   47  git fetch
+   48  git status
+   49  git pull
+   50  git push origin master
+   51  hist
+   52  history 
+   53  ls
+   54  ll
+   55  ls
+   56  pwd
+   57  ls
+   58  ls
+   59  ls
+   60  ll
+   61  ls
+   62  ls
+   63  ll
+   64  pwd
+   65  pwd
+   66  git status
+   67  ls
+   68  ll
+   69  git status
+   70  git status
+   71  git status
+   72  git fetch 
+   73  git status
+   74  git pull
+   75  git status
+   76  git add *
+   77  git status
+   78  git commit -m "update version from githup"
+   79  git pull
+   80  git fetch 
+   81  git status
+   82  git pull
+   83  git pull
+   84  git status
+   85  git add *
+   86  git commit -m "updating changing passowrd module"
+   87  git fetch
+   88  git status
+   89  git pull
+   90  git push origin master
+   91  git status
+   92  git add *
+   93  git commit -m "update layout of the webpage"
+   94  git status
+   95  git push origin master
+   96  git fetch
+   97  git status
+   98  git fetch
+   99  git status
+  100  git pull
+  101  git status
+  102  git add *
+  103  git commit -m "update webpage layout"
+  104  git push origin master
+  105  git fetch
+  106  git fetch
+  107  git pull
+  108  git push origin master
+  109  ls
+  110  cd Documents/
+  111  ls
+  112  ll
+  113  cd Internet_Application/
+  114  ls
+  115  ll
+  116  cd Project/
+  117  ls
+  118  ll
+  119  git clone https://github.com/tabtu/Pypro
+  120  ls
+  121  ll
+  122  git clone https://github.com/tabtu/Pypro
+  123  ls
+  124  ll
+  125  cd Pypro/
+  126  ls
+  127  ll
+  128  git status
+  129  pwd
+  130  ll
+  131  python3 manage.py runserver 127.0.0.1:8000
+  132  python3 manage.py runserver 127.0.0.1:8000
+  133  python3 manage.py runserver 127.0.0.1:8000
+  134  ls
+  135  ll
+  136  python3 manage.py runserver 127.0.0.1:8000
+  137  ls
+  138  cd Documents/
+  139  ls
+  140  ls
+  141  cd Internet_Application/
+  142  ls
+  143  ls
+  144  ls
+  145  cd Project/
+  146  ls
+  147  cd Pypro
+  148  ls
+  149  ll
+  150  git status
+  151  git status
+  152  git add *
+  153  git status
+  154  git rm myapp/__pycache__/views.cpython-36.pyc
+  155  git status
+  156  git status
+  157  git status
+  158  git add *
+  159  git status
+  160  git status
+  161  git add *
+  162  git status
+  163  git commit -m "update addtopic function""
+  164  git commit -m "update addtopic function"
+  165  git status
+  166  git push origin master
+  167  git fetch 
+  168  git pull
+  169  git status
+  170  git add *
+  171  git commit -m "update addtopic moudle"
+  172  git status
+  173  git push origin master
+  174  git status
+  175  ps -ef |grep -i mysqld
+  176  ps -ef |grep -i mysql
+  177  ps -ef |grep -i mysql
+  178  ps -ef |grep -i mysql
+  179  ps -ef |grep -i mysql
+  180  ps -ef |grep -i mamp
+  181   sudo killall -9 mysqld
+  182  ant -version
+  183  brew -version
+  184  brew --version
+  185  brew update
+  186  brew 
+  187  brew list
+  188  brew upgrade 
+  189  ls
+  190  lll
+  191  ll
+  192  ant -version
+  193  adb version
+  194  android
+  195  ls
+  196  cd ..
+  197  ls
+  198  cd ..
+  199  ls
+  200  cd Applications/Evothings\ Studio.app/
+  201  ls
+  202  pwd
+  203  ls
+  204  cd Contents/
+  205  ls
+  206  cd ~
+  207  pwd
+  208  ls
+  209  whoami
+  210  ls
+  211  cd EvothingsStudio/
+  212  ls
+  213  cd MyApps/
+  214  ls
+  215  git clone https://github.com/commadelimited/jQuery-Mobile-Bootstrap-Theme
+  216  ls
+  217  cd jQuery-Mobile-Bootstrap-Theme/
+  218  ls
+  219  ll
+  220  ls
+  221  which git 
+  222  brew list
+  223  git config --global user.name "Eason2001" 
+  224  git config --global user.email "zhicheng2001@gmail.com"
+  225  more ~/.bash_profile
+  226  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www/themes" && clear
+  227  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  228  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www/themes" && clear
+  229  which chrome
+  230  which Chrome
+  231  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  232  pwd
+  233  cd /
+  234  ls
+  235  ll Applications/Google\ Chrome.app/
+  236  which node
+  237  cd /usr/local/Cellar/node/8.1.0/bin/node
+  238  cd /usr/local/Cellar/node/8.1.0/bin/
+  239  ll
+  240  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  241  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  242  ls
+  243  cd ..
+  244  ls
+  245  cd ..
+  246  ls
+  247  cd ~
+  248  ls
+  249  cd EvothingsStudio/MyApps/jQuery-Mobile-Bootstrap-Theme/
+  250  ls
+  251  git status
+  252  git --help
+  253  ls
+  254  cd ..
+  255  ls
+  256  ls
+  257  cd..
+  258  cd ..
+  259  ls
+  260  ls
+  261  cd ..
+  262  ls
+  263  ls
+  264  ll
+  265  cd Temp/
+  266  ls
+  267  ll
+  268  cd ..
+  269  ls
+  270  cordova -h
+  271  cordova create TestApp com.rcim.cordova.TestApp TestApp
+  272  ls
+  273  cd TestApp/
+  274  ls
+  275  ll
+  276  cd platforms/
+  277  ls
+  278  ls
+  279  cd ..
+  280  ls
+  281  cd ..
+  282  ls
+  283  ll
+  284  rm TestApp/
+  285  rm -d TestApp/
+  286  rm -fd TestApp/
+  287  rm -f -d TestApp/
+  288  rm -f  TestApp/
+  289  rm -h
+  290  rm -f -d  TestApp
+  291  rm -f -d  TestApp
+  292  ls
+  293  ls
+  294  ls
+  295  ll
+  296  rm --help
+  297  rm -f -d TestApp/
+  298  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  299  ls
+  300  pwd
+  301  ls
+  302  cd ..
+  303  pwd
+  304  ll
+  305  ..
+  306  cd ..
+  307  ls
+  308  ll
+  309  ls
+  310  cd myApp/
+  311  ls
+  312  ll
+  313  pwd
+  314  cd www/
+  315  ls
+  316  ll
+  317  more index.html 
+  318  ls
+  319  cd ..
+  320  ls
+  321  ..
+  322  ls
+  323  ll
+  324  cd ..
+  325  ls
+  326  cd MyCordoTest/
+  327  ls
+  328  ll
+  329  cd plugins/
+  330  ls
+  331  ll
+  332  cd cordova-plugin-whitelist/
+  333  ls
+  334  more plugin.xml 
+  335  cd ~
+  336  ls
+  337  cd Documents/
+  338  ls
+  339  cd workspace/
+  340  ls
+  341  cd MyCordoTest/
+  342  s
+  343  ls
+  344  ll
+  345  ls
+  346  cd platforms/
+  347  ls
+  348  cd ..
+  349  ls
+  350  ll
+  351  ls
+  352  more ~/.bash_profile
+  353  ls
+  354  ll
+  355  man find
+  356  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  357  ls
+  358  ls
+  359  ls
+  360  ll
+  361  cd ..
+  362  ls
+  363  ls
+  364  ls
+  365  ll
+  366  cordova platform ls
+  367  cordova platform ls
+  368  ls
+  369  ll
+  370  cordova requirements
+  371  cordova build
+  372  ls
+  373  cordova -h
+  374  cordova emulate android
+  375  android avd
+  376  npm -h
+  377  npm -l
+  378  npm -h
+  379  npm -h
+  380  npm help npm
+  381  ls
+  382  ll
+  383  which android SDK
+  384  which android
+  385  which unzip
+  386  cordova -v
+  387  cd /usr/local/share/android-sdk/tools/android
+  388  ls
+  389  cd /usr/local/share/android-sdk/tools/
+  390  ls
+  391  ll
+  392  ls
+  393  ll
+  394  cd ..
+  395  ls
+  396  ll
+  397  cd ..
+  398  ls
+  399  cd ..
+  400  ls
+  401  ls
+  402  cd share/
+  403  ls
+  404  ll
+  405  cd android-sdk
+  406  ls
+  407  ll
+  408  pwd
+  409  ls
+  410  ls
+  411  pwd
+  412  ls
+  413  ll
+  414  find -name manage
+  415  find -f .  -name manage
+  416  man find
+  417  find . -name manager
+  418  find . -name manage
+  419  find . -name *manage*
+  420  ls
+  421  cd tools/bin/
+  422  ls
+  423  ll
+  424  cd sdkmanager 
+  425  ll
+  426  ./sdkmanager 
+  427  ls
+  428  sdkmanager --help
+  429  sdkmanager --list
+  430  sdkmanager -h
+  431  ls
+  432  sdkmanager --h
+  433  sdkmanager --update emulator
+  434  sdkmanager --list
+  435  sdkmanager -h
+  436  sdkmanager --h
+  437  sdkmanager --update emulator
+  438  sdkmanager --install 
+  439  sdkmanager --install extras;android;m2repository
+  440  sdkmanager android update emulator
+  441  sdkmanager --update
+  442  sdkmanager --list
+  443  sdkmanager "extras;android;m2repository"
+  444  sdkmanager "extras;google;m2repository"
+  445  sdkmanager "extras;google;g...e_play_services"
+  446  sdkmanager --list
+  447  sdkmanager "extras;google;google_play_services"
+  448  sdkmanager "extras;android-support"
+  449  sdkmanager "android-support"
+  450  sdkmanager --list
+  451  sdkmanager "Android Support Library"
+  452  cordova plugin add cordova-plugin-googlemaps --variable API_KEY="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  453  cd ~
+  454  cd Documents/workspace/
+  455  ls
+  456  ll
+  457  cd MyCordoTest/
+  458  ls
+  459  ll
+  460  cordova plugin add cordova-plugin-googlemaps --variable API_KEY="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  461  cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  462  LS
+  463  ls
+  464  ll
+  465  cd plugins/
+  466  ls
+  467  ll
+  468  cd ..
+  469  ls
+  470  ll
+  471  cordova run android
+  472  which android
+  473  cd /usr/local/share/android-sdk/tools/android
+  474  cd /usr/local/share/android-sdk/tools/
+  475  ls
+  476  cd bin/
+  477  ls
+  478  avdmanager -h
+  479  avdmanager list 
+  480  avdmanager -h
+  481  avdmanager -create avd 
+  482  avdmanager create avd  
+  483  avdmanager create avd --name Nexus10 --device 6 
+  484  sdkmanager --list
+  485  ls
+  486  avdmanager --list
+  487  avdmanager list
+  488  avdmanager create avd --name Nexus10 --device 6 
+  489  avdmanager create avd
+  490  avdmanager create avd -n Nexus10 -k "android-25"
+  491  avdmanager create avd -n Nexus10 -k null -d 1
+  492  avdmanager create avd -n Nexus10 -k 6
+  493  avdmanager create avd -n Nexus10 -k 'system-images;android-19;google_apis;x86'
+  494  avdmanager create avd -n android-25 -k 1
+  495  avdmanager create avd -n android-25 -k "android-25"
+  496  avdmanager create avd -n Nexus10 -k "" -d 1
+  497  avdmanager list target
+  498  avdmanager list
+  499  avdmanager create avd 
+  500  avdmanager create avd -n android-25 -k "com.rcim.indoorApp"
+  501  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  502  ls
+  503  cd ..
+  504  ls
+  505  cordova run
+  506  cordova android run
+  507  cordova -h
+  508  cordova run android
+  509  cordova run android
+  510  ll
+  511  cd ww
+  512  cd www
+  513  ls
+  514  pwd
+  515  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/www --plugin /Users/Kevin/Documents/workspace/MyCordoTest/plugins/cordova-plugin-googlemaps/
+  516  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/www --plugin /Users/Kevin/Documents/workspace/MyCordoTest/plugins/cordova-plugin-googlemaps 
+  517  plugman search googlemap
+  518  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/www --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" 
+  519  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" 
+  520  cordova -h
+  521  npm -h
+  522  npm -l
+  523  cd ..
+  524  ls
+  525  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  526  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www
+  527  plugman install -d --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www
+  528  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www
+  529  cordova
+  530  cordova platform add android
+  531  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www 
+  532  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/platforms/android/ --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www 
+  533  history  > command.collection
+  125  cd Pypro/
+  126  ls
+  127  ll
+  128  git status
+  129  pwd
+  130  ll
+  131  python3 manage.py runserver 127.0.0.1:8000
+  132  python3 manage.py runserver 127.0.0.1:8000
+  133  python3 manage.py runserver 127.0.0.1:8000
+  134  ls
+  135  ll
+  136  python3 manage.py runserver 127.0.0.1:8000
+  137  ls
+  138  cd Documents/
+  139  ls
+  140  ls
+  141  cd Internet_Application/
+  142  ls
+  143  ls
+  144  ls
+  145  cd Project/
+  146  ls
+  147  cd Pypro
+  148  ls
+  149  ll
+  150  git status
+  151  git status
+  152  git add *
+  153  git status
+  154  git rm myapp/__pycache__/views.cpython-36.pyc
+  155  git status
+  156  git status
+  157  git status
+  158  git add *
+  159  git status
+  160  git status
+  161  git add *
+  162  git status
+  163  git commit -m "update addtopic function""
+  164  git commit -m "update addtopic function"
+  165  git status
+  166  git push origin master
+  167  git fetch 
+  168  git pull
+  169  git status
+  170  git add *
+  171  git commit -m "update addtopic moudle"
+  172  git status
+  173  git push origin master
+  174  git status
+  175  ps -ef |grep -i mysqld
+  176  ps -ef |grep -i mysql
+  177  ps -ef |grep -i mysql
+  178  ps -ef |grep -i mysql
+  179  ps -ef |grep -i mysql
+  180  ps -ef |grep -i mamp
+  181   sudo killall -9 mysqld
+  182  ant -version
+  183  brew -version
+  184  brew --version
+  185  brew update
+  186  brew 
+  187  brew list
+  188  brew upgrade 
+  189  ls
+  190  lll
+  191  ll
+  192  ant -version
+  193  adb version
+  194  android
+  195  ls
+  196  cd ..
+  197  ls
+  198  cd ..
+  199  ls
+  200  cd Applications/Evothings\ Studio.app/
+  201  ls
+  202  pwd
+  203  ls
+  204  cd Contents/
+  205  ls
+  206  cd ~
+  207  pwd
+  208  ls
+  209  whoami
+  210  ls
+  211  cd EvothingsStudio/
+  212  ls
+  213  cd MyApps/
+  214  ls
+  215  git clone https://github.com/commadelimited/jQuery-Mobile-Bootstrap-Theme
+  216  ls
+  217  cd jQuery-Mobile-Bootstrap-Theme/
+  218  ls
+  219  ll
+  220  ls
+  221  which git 
+  222  brew list
+  223  git config --global user.name "Eason2001" 
+  224  git config --global user.email "zhicheng2001@gmail.com"
+  225  more ~/.bash_profile
+  226  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www/themes" && clear
+  227  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  228  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www/themes" && clear
+  229  which chrome
+  230  which Chrome
+  231  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  232  pwd
+  233  cd /
+  234  ls
+  235  ll Applications/Google\ Chrome.app/
+  236  which node
+  237  cd /usr/local/Cellar/node/8.1.0/bin/node
+  238  cd /usr/local/Cellar/node/8.1.0/bin/
+  239  ll
+  240  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  241  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  242  ls
+  243  cd ..
+  244  ls
+  245  cd ..
+  246  ls
+  247  cd ~
+  248  ls
+  249  cd EvothingsStudio/MyApps/jQuery-Mobile-Bootstrap-Theme/
+  250  ls
+  251  git status
+  252  git --help
+  253  ls
+  254  cd ..
+  255  ls
+  256  ls
+  257  cd..
+  258  cd ..
+  259  ls
+  260  ls
+  261  cd ..
+  262  ls
+  263  ls
+  264  ll
+  265  cd Temp/
+  266  ls
+  267  ll
+  268  cd ..
+  269  ls
+  270  cordova -h
+  271  cordova create TestApp com.rcim.cordova.TestApp TestApp
+  272  ls
+  273  cd TestApp/
+  274  ls
+  275  ll
+  276  cd platforms/
+  277  ls
+  278  ls
+  279  cd ..
+  280  ls
+  281  cd ..
+  282  ls
+  283  ll
+  284  rm TestApp/
+  285  rm -d TestApp/
+  286  rm -fd TestApp/
+  287  rm -f -d TestApp/
+  288  rm -f  TestApp/
+  289  rm -h
+  290  rm -f -d  TestApp
+  291  rm -f -d  TestApp
+  292  ls
+  293  ls
+  294  ls
+  295  ll
+  296  rm --help
+  297  rm -f -d TestApp/
+  298  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  299  ls
+  300  pwd
+  301  ls
+  302  cd ..
+  303  pwd
+  304  ll
+  305  ..
+  306  cd ..
+  307  ls
+  308  ll
+  309  ls
+  310  cd myApp/
+  311  ls
+  312  ll
+  313  pwd
+  314  cd www/
+  315  ls
+  316  ll
+  317  more index.html 
+  318  ls
+  319  cd ..
+  320  ls
+  321  ..
+  322  ls
+  323  ll
+  324  cd ..
+  325  ls
+  326  cd MyCordoTest/
+  327  ls
+  328  ll
+  329  cd plugins/
+  330  ls
+  331  ll
+  332  cd cordova-plugin-whitelist/
+  333  ls
+  334  more plugin.xml 
+  335  cd ~
+  336  ls
+  337  cd Documents/
+  338  ls
+  339  cd workspace/
+  340  ls
+  341  cd MyCordoTest/
+  342  s
+  343  ls
+  344  ll
+  345  ls
+  346  cd platforms/
+  347  ls
+  348  cd ..
+  349  ls
+  350  ll
+  351  ls
+  352  more ~/.bash_profile
+  353  ls
+  354  ll
+  355  man find
+  356  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  357  ls
+  358  ls
+  359  ls
+  360  ll
+  361  cd ..
+  362  ls
+  363  ls
+  364  ls
+  365  ll
+  366  cordova platform ls
+  367  cordova platform ls
+  368  ls
+  369  ll
+  370  cordova requirements
+  371  cordova build
+  372  ls
+  373  cordova -h
+  374  cordova emulate android
+  375  android avd
+  376  npm -h
+  377  npm -l
+  378  npm -h
+  379  npm -h
+  380  npm help npm
+  381  ls
+  382  ll
+  383  which android SDK
+  384  which android
+  385  which unzip
+  386  cordova -v
+  387  cd /usr/local/share/android-sdk/tools/android
+  388  ls
+  389  cd /usr/local/share/android-sdk/tools/
+  390  ls
+  391  ll
+  392  ls
+  393  ll
+  394  cd ..
+  395  ls
+  396  ll
+  397  cd ..
+  398  ls
+  399  cd ..
+  400  ls
+  401  ls
+  402  cd share/
+  403  ls
+  404  ll
+  405  cd android-sdk
+  406  ls
+  407  ll
+  408  pwd
+  409  ls
+  410  ls
+  411  pwd
+  412  ls
+  413  ll
+  414  find -name manage
+  415  find -f .  -name manage
+  416  man find
+  417  find . -name manager
+  418  find . -name manage
+  419  find . -name *manage*
+  420  ls
+  421  cd tools/bin/
+  422  ls
+  423  ll
+  424  cd sdkmanager 
+  425  ll
+  426  ./sdkmanager 
+  427  ls
+  428  sdkmanager --help
+  429  sdkmanager --list
+  430  sdkmanager -h
+  431  ls
+  432  sdkmanager --h
+  433  sdkmanager --update emulator
+  434  sdkmanager --list
+  435  sdkmanager -h
+  436  sdkmanager --h
+  437  sdkmanager --update emulator
+  438  sdkmanager --install 
+  439  sdkmanager --install extras;android;m2repository
+  440  sdkmanager android update emulator
+  441  sdkmanager --update
+  442  sdkmanager --list
+  443  sdkmanager "extras;android;m2repository"
+  444  sdkmanager "extras;google;m2repository"
+  445  sdkmanager "extras;google;g...e_play_services"
+  446  sdkmanager --list
+  447  sdkmanager "extras;google;google_play_services"
+  448  sdkmanager "extras;android-support"
+  449  sdkmanager "android-support"
+  450  sdkmanager --list
+  451  sdkmanager "Android Support Library"
+  452  cordova plugin add cordova-plugin-googlemaps --variable API_KEY="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  453  cd ~
+  454  cd Documents/workspace/
+  455  ls
+  456  ll
+  457  cd MyCordoTest/
+  458  ls
+  459  ll
+  460  cordova plugin add cordova-plugin-googlemaps --variable API_KEY="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  461  cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  462  LS
+  463  ls
+  464  ll
+  465  cd plugins/
+  466  ls
+  467  ll
+  468  cd ..
+  469  ls
+  470  ll
+  471  cordova run android
+  472  which android
+  473  cd /usr/local/share/android-sdk/tools/android
+  474  cd /usr/local/share/android-sdk/tools/
+  475  ls
+  476  cd bin/
+  477  ls
+  478  avdmanager -h
+  479  avdmanager list 
+  480  avdmanager -h
+  481  avdmanager -create avd 
+  482  avdmanager create avd  
+  483  avdmanager create avd --name Nexus10 --device 6 
+  484  sdkmanager --list
+  485  ls
+  486  avdmanager --list
+  487  avdmanager list
+  488  avdmanager create avd --name Nexus10 --device 6 
+  489  avdmanager create avd
+  490  avdmanager create avd -n Nexus10 -k "android-25"
+  491  avdmanager create avd -n Nexus10 -k null -d 1
+  492  avdmanager create avd -n Nexus10 -k 6
+  493  avdmanager create avd -n Nexus10 -k 'system-images;android-19;google_apis;x86'
+  494  avdmanager create avd -n android-25 -k 1
+  495  avdmanager create avd -n android-25 -k "android-25"
+  496  avdmanager create avd -n Nexus10 -k "" -d 1
+  497  avdmanager list target
+  498  avdmanager list
+  499  avdmanager create avd 
+  500  avdmanager create avd -n android-25 -k "com.rcim.indoorApp"
+  501  cd "/Users/Kevin/Documents/workspace/MyCordoTest/www" && clear
+  502  ls
+  503  cd ..
+  504  ls
+  505  cordova run
+  506  cordova android run
+  507  cordova -h
+  508  cordova run android
+  509  cordova run android
+  510  ll
+  511  cd ww
+  512  cd www
+  513  ls
+  514  pwd
+  515  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/www --plugin /Users/Kevin/Documents/workspace/MyCordoTest/plugins/cordova-plugin-googlemaps/
+  516  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/www --plugin /Users/Kevin/Documents/workspace/MyCordoTest/plugins/cordova-plugin-googlemaps 
+  517  plugman search googlemap
+  518  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/www --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" 
+  519  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" 
+  520  cordova -h
+  521  npm -h
+  522  npm -l
+  523  cd ..
+  524  ls
+  525  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  526  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www
+  527  plugman install -d --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www
+  528  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www
+  529  cordova
+  530  cordova platform add android
+  531  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www 
+  532  plugman install --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/platforms/android/ --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www 
+  533  history  > command.collection
+  534  more command.collection 
+  535  plugman uninstall --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/platforms/android/ --plugin https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www 
+  536  plugman uninstall --platform android --project /Users/Kevin/Documents/workspace/MyCordoTest/platforms/android/ --plugin cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I" -www /Users/Kevin/Documents/workspace/MyCordoTest/www 
+  537  cordova 
+  538  cordova plugin 
+  539  cordova plugin 
+  540  cordova plugin 
+  541  cordova plugin -h
+  542  cordova plugin rm cordova-plugin-googlemaps
+  543  npm --list
+  544  npm -l
+  545  pwd
+  546  ls
+  547  cd www
+  548  ls
+  549  ls
+  550  cd ..
+  551  cd ..
+  552  ls
+  553  cd Temp/
+  554  ls
+  555  ll
+  556  ll
+  557  cordova plugin add https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  558  ls
+  559  ls
+  560  cd ..
+  561  ls
+  562  cd MyCordoTest/
+  563  ls
+  564  ll
+  565* 
+  566  cordova plugin add https://github.com/mapsplugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I"
+  567  cordova plugin ls
+  568  cordova plugin ls
+  569  cordova -h
+  570  cordova config ls
+  571  cordova run android
+  572  ls
+  573  cordova run android
+  574  cordova run android
+  575  cordova run android
+  576  cordova run android
+  577  cordova run android
+  578  cordova run android
+  579  cordova run android
+  580  cordova run android
+  581  cordova run android
+  582  cordova run android
+  583  cordova run android
+  584  cordova run android
+  585  cordova run android
+  586  cordova 
+  587  cordova run -h
+  588  cordova run --debug android --nobuild
+  589  cordova run --debug android
+  590  cordova run --debug android
+  591  cordova run --debug android --nobuild
+  592  cordova run --debug android --nobuild
+  593  cordova run --debug android --nobuild
+  594  cordova run --debug android --nobuild
+  595  cordova run --debug android --nobuild
+  596  cordova run --debug android
+  597  cordova run --debug android
+  598  cordova run --debug android
+  599  cordova run --debug android
+  600  cordova run --debug android
+  601  cordova run --debug android
+  602  cordova run --debug android
+  603  cordova run --debug android
+  604  cordova run --debug android
+  605  cordova run --debug android
+  606  cordova run --debug android
+  607  cordova run --debug android
+  608  cordova run --debug android
+  609  cordova run --debug android
+  610  cordova run --debug android
+  611  cordova run --debug android
+  612  cordova run --debug android
+  613  cordova run --debug android
+  614  cordova run --debug android
+  615  cordova run --debug android
+  616  cordova run --debug android
+  617  cordova run --debug android
+  618  cordova run --debug android
+  619  cordova run --debug android
+  620  cordova run
+  621  cordova run -h
+  622  ls
+  623  ll
+  624  history >> command.collection 

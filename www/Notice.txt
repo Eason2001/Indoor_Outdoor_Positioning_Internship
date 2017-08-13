@@ -1,0 +1,13 @@
+1. when finishing loading the app, need to 
+   3-4 seconds and then enter to the NearBy page,
+   because it needs location and searching returned
+   data from Googlemap api to initiate the Googlemap
+   on this page, it takes time to returned.
+   (Maybe we can use the local sensor data to reduce
+   the time as you mentioned)
+
+2. the program runs following the below orders:
+   a. get user current location, b. search the location nearby information,
+   c. initiate the Googlemap and show it on the NearBy page
+
+   
