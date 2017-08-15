@@ -32,7 +32,7 @@
         <script type="text/javascript" src="js/jquery.imgcheckbox.js"></script> 
         <script type="text/javascript" src="js/jquery.fly.min.js"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I&libraries=places"></script>
-<!--         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVFbdpItEFLcCD1cWpqxOb9FdZRwJNd4I&libraries=places" async defer></script> -->
+<!--for future use:         <script type="text/javascript" src="js/jqthumb.min.js" ></script> -->
     </head>
     <body>
 
@@ -78,16 +78,215 @@
                 </div>              
             </div>
             <div data-role="content" >
-                <div id="map_canvas" style="height:100px;width:100%"></div>
+                <div id="map_canvas" style="height:300px;width:100%"></div>
                 <!-- <img src="./img/googleMap.jpeg" align="center" width="100%" /> --> 
                 <label id="map_debug"></label>
                 <p>NEARBY FLYERS </p>
                     <div>
-                        <div align="center" >                            
-                            <a href="#proDetail" ><img class="coverPic" src="./img/coverPics/covPic1.jpg" width="30%" /> </a>
-                            <a href="#proDetail" ><img class="coverPic" src="./img/coverPics/covPic2.jpg" width="30%" /> </a>
-                            <a href="#proDetail" ><img class="coverPic" src="./img/coverPics/covPic2.jpg" width="30%" /> </a>
-                        </div>                      
+
+                        <table>
+                            <tr>
+                                <td>
+                                    <a id="flyer1-a" href="#proDetail" >
+                                    <table class="proTable" border="0" cellspacing="1" cellpadding="0">
+                                      <tbody>
+                                        <tr>
+                                          <td class="topRow"><span id="flyer1-name"></span></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="contentRow"> 
+                                            
+                                             <table>
+                                                <tr>
+                                                    <td>
+                                                        <div id="flyer1-Div1" data-product="1001" class="product" >
+                                                            
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div id="flyer1-Div2" data-product="1002" class="product" >
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div id="flyer1-Div3" data-product="1003" class="product" >
+
+                                                        </div>
+
+                                                    </td>                                                
+                                                    <td>
+                                                        <div id="flyer1-Div4" data-product="1004" class="product"  >
+
+                                                        </div> 
+
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div id="flyer1-Div5" data-product="1005" class="product" >
+
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div id="flyer1-Div6" data-product="1006" class="product">
+
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                            
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="bottomRow"></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>                                    
+                                    </a>
+                                
+                                </td> 
+                                <td>
+                                    <a id="flyer2-a" href="#proDetail" >
+                                    <table class="proTable" border="0" cellspacing="1" cellpadding="0">
+                                      <tbody>
+                                        <tr>
+                                          <td class="topRow"><span id="flyer2-name"></span></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="contentRow"> 
+
+                                             <table>
+                                                <tr>
+                                                    <td>
+                                                        <div id="flyer2-Div1" data-product="1001" class="product" >
+
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div id="flyer2-Div2" data-product="1002" class="product" >
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div id="flyer2-Div3" data-product="1003" class="product" >
+
+                                                        </div>
+
+                                                    </td>                                                
+                                                    <td>
+                                                        <div id="flyer2-Div4" data-product="1004" class="product"  >
+
+                                                        </div> 
+
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div id="flyer2-Div5" data-product="1005" class="product" >
+
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div id="flyer2-Div6" data-product="1006" class="product">
+
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+
+                                            </table> 
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="bottomRow"></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>                                      
+                                    </a>
+
+                                </td> 
+                                <td>
+                                    <a id="flyer3-a" href="#proDetail" >
+                                    <table class="proTable" border="0" cellspacing="1" cellpadding="0">
+                                      <tbody>
+                                        <tr>
+                                          <td class="topRow"><span id="flyer3-name"></span></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="contentRow"> 
+
+                                             <table>
+                                                <tr>
+                                                    <td>
+                                                        <div id="flyer3-Div1" data-product="1001" class="product" >
+
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div id="flyer3-Div2" data-product="1002" class="product" >
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div id="flyer3-Div3" data-product="1003" class="product" >
+
+                                                        </div>
+
+                                                    </td>                                                
+                                                    <td>
+                                                        <div id="flyer3-Div4" data-product="1004" class="product"  >
+
+                                                        </div> 
+
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div id="flyer3-Div5" data-product="1005" class="product" >
+
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div id="flyer3-Div6" data-product="1006" class="product">
+
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+
+                                            </table> 
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="bottomRow"></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>      
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                                              
                     </div>
             </div>
             <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
@@ -208,11 +407,12 @@
                 </div>              
             </div>
             <div data-role="content" >
-                    <div class="proTable">
-                        <table border="0" cellspacing="1" cellpadding="0">
+                    <div >
+
+                        <table class="proTable" border="0" cellspacing="1" cellpadding="0">
                           <tbody>
                             <tr>
-                              <td class="topRow">Shoppers Drug Mart</td>
+                              <td class="topRow"><span id="provider-name"></span></td>
                             </tr>
                             <tr>
                               <td class="contentRow"> 
@@ -220,60 +420,72 @@
                                  <table>
                                     <tr>
                                         <td>
-                                            <div data-product="1001" class="product" >
-                                                <img class="proPic" src="./img/detailPics/WechatIMG21.jpeg" width="80%" />
-                                                <span data-name="GalaxyA5"></span>
-                                                <span data-price="524.75"></span>
-                                                <span data-image="./img/WechatIMG21.jpeg"></span>
+                                            <div id="proDiv1" data-product="1001" class="product" >
+                                                <img id="proPic1" class="proPic"   />
+
                                             </div>
                                         </td>
                                         <td>
-                                            <div data-product="1002" class="product" >
-                                                <img class="proPic" src="./img/detailPics/WechatIMG22.jpeg" width="80%"/>
-                                                <span data-name="clji"></span>
-                                                <span data-price="579"></span>
-                                                <span data-image="./img/WechatIMG22.jpeg"></span>
+                                            <div id="proDiv2" data-product="1002" class="product" >
+                                                <img id="proPic2" class="proPic"   />
+
                                             </div>
                                         </td>
                                         <td>
-                                            <div data-product="1003" class="product" >
-                                                <img class="proPic"  src="./img/detailPics/WechatIMG23.jpeg" width="80%"/>
-                                                <span data-name="HP-P500"></span>
-                                                <span data-price="29.98"></span>
-                                                <span data-image="./img/WechatIMG23.jpeg"></span>
+                                            <div id="proDiv3" data-product="1003" class="product" >
+                                                <img id="proPic3" class="proPic"   />
+
                                             </div>
 
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <div data-product="1004" class="product"  >
-                                                <img class="proPic"  src="./img/detailPics/WechatIMG24.jpeg" width="80%"/>
-                                                <span data-name="PAPACO"></span>
-                                                <span data-price="49.22"></span>
-                                                <span data-image="./img/WechatIMG24.jpeg"></span>
+                                            <div id="proDiv4" data-product="1004" class="product"  >
+                                                <img id="proPic4" class="proPic"   />
+
                                             </div> 
 
                                         </td>
                                         <td>
-                                            <div data-product="1005" class="product" >
-                                                <img class="proPic" src="./img/detailPics/WechatIMG21.jpeg" width="80%" />
-                                                <span data-name="GalaxyA5New"></span>
-                                                <span data-price="524.75"></span>
-                                                <span data-image="./img/WechatIMG21.jpeg"></span>
+                                            <div id="proDiv5" data-product="1005" class="product" >
+                                                <img id="proPic5" class="proPic"   />
+
                                             </div>
 
                                         </td>
                                         <td>
-                                            <div data-product="1006" class="product">
-                                                <img class="proPic" src="./img/detailPics/WechatIMG22.jpeg" width="80%"/>
-                                                <span data-name="clji222"></span>
-                                                <span data-price="579"></span>
-                                                <span data-image="./img/WechatIMG22.jpeg"></span>
+                                            <div id="proDiv6" data-product="1006" class="product">
+                                                <img id="proPic6" class="proPic"  />
+
                                             </div>
 
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>
+                                            <div id="proDiv7" data-product="1007" class="product"  >
+                                                <img id="proPic7" class="proPic"   />
+
+                                            </div> 
+
+                                        </td>
+                                        <td>
+                                            <div id="proDiv8" data-product="1008" class="product" >
+                                                <img id="proPic8" class="proPic"   />
+
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div id="proDiv9" data-product="1009" class="product">
+                                                <img id="proPic9" class="proPic"  />
+
+                                            </div>
+
+                                        </td>
+                                    </tr>            
+
                                 </table> 
 
                               </td>
@@ -283,6 +495,7 @@
                             </tr>
                           </tbody>
                         </table>
+
                     </div>
 
             </div>
@@ -302,103 +515,234 @@
         <script type="text/javascript">
             var count = 0;
             var appDB;
-            var currentLocation;
+            //use default location when it is not allowed to access user's location
+            var currentLocation={lat: 42.304672, lng: -83.062009}; 
             var map;
             var service;
-            var infowindow=[];
-            var marker=[];
-            var placeFound=[];
+            var placeFound=[];  //used to store the suitable places after filtering the original searching results
             var placeCount=0;
+            // the placeFound and placeFound_Detail are different: placeFound is a list of places, 
+            var flyerNUM=3;  //it has to be matched with the number of flyers in #NBList page, means to get 3 places detail info 
+            var detailPlaces=[]; //used to store the detail info for these 3 places mentioned above
+            var detailPlacesCnt=0; //used to count the detailPlaces
+            var flyerClick=0; //used to record the index of a place that user clicked, default set to 0
 
+            // preparing the map size to device-heights
             function resizeMap() {
-                // $("#map_debug").html("<h3>Debugs: resizing map height...</h3>");                
-                $("#map_canvas").attr("style","height:300px;width:100%");
+                // eq() index selector 
+                // var header = $('.ui-header:eq(1)');
+                // var footer = $('.ui-footer:eq(1)');
+                var canvasHeight = window.innerHeight *0.50;
+                var styleStr = "height:" + canvasHeight + "px;width:100%";
+
+                $("#map_canvas").attr("style",styleStr);
 
             }
+            // looking for num places that at least have 6 photos in places list, then call fillFlyers() to filling flyers
+            function getPlacesDetail(places, num, callbackFunc) {
+                var service = new google.maps.places.PlacesService(map);
+                for (var i = 0; i < places.length; i++) {
+                    pID=places[i].place_id;
+                    // if (places.length!=i+1) {
+                    service.getDetails({ placeId: pID }, function(place, status) {
+                        if (status == google.maps.places.PlacesServiceStatus.OK) {
+                            var photos=place.photos;
+                            if (photos.length<6) {
+                                // console.log("This place does not have 6 photos, return directly.");                                
+                                return;  //this place does not have 6 photos, return directly
+                            } else if (detailPlacesCnt>=num) {
+                                // console.log("Already found num places, program will return directly.");
+                                return;
+                            } else {
+                                // adding a newly found place into detailPlaces[]
+                                detailPlaces[detailPlacesCnt]=place;
+                                detailPlacesCnt=detailPlacesCnt+1;
+                                // console.log("get a place that has at least 6 photos, place_id is: " + place.place_id );
 
-            function getCurrentLocation() {
+                                //call callbackFunc at once when it found num places that meets the requirement
+                                if (detailPlacesCnt==num)
+                                {// console.log("Already found num places, program will call fillFlyers() and return.");
+                                    callbackFunc(detailPlaces, 3, 6);   };
 
-                if (navigator.geolocation) {
-                    $("#map_debug").html("<h3>Debugs: start to get the currentLocation.</h3>");
+                            }
 
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        currentLocation = {
-                          lat: position.coords.latitude,
-                          lng: position.coords.longitude
-                        };
-                        // $("#map_debug").html("Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude );
-                        $("#map_debug").html("Latitude: " + currentLocation.lat + "<br>Longitude: " + currentLocation.lng );
+                        }
 
-                    }, function(error) {
-                    switch(error.code) {
-                        case error.PERMISSION_DENIED:
-                            $("#map_debug").html("User denied the request for Geolocation.");
-                            break;
-                        case error.POSITION_UNAVAILABLE:
-                            $("#map_debug").html("Location information is unavailable.");
-                            break;
-                        case error.TIMEOUT:
-                            $("#map_debug").html("The request to get user location timed out.");
-                            break;
-                        case error.UNKNOWN_ERROR:
-                            $("#map_debug").html("An unknown error occurred.");
-                            break;
-                    }                    
-                    // handleLocationError(true, infoWindow, map.getCenter());
-                    });
-                } else {
-                  // Browser doesn't support Geolocation
-                  $("#map_debug").html("<h3>Error: Your browser/device doesn\'t support geolocation.</h3>"); 
+                    }); 
 
-                }
-
-            }
-
-
-            function createMarker(place,placeNUM) {
-                $("#map_debug").html("<h3>Debugs: initiating the createMarker...</h3>");  
-                // var placeLoc = place.geometry.location;
-                // storing the found places for futrue use, like obtaining its detail info and storing into database
-                var photos = place.photos;
-                  if (!photos) {
-                    return;
                 };
-                placeFound[placeNUM]=place;
-                placeCount=placeNUM+1;
-                marker[placeNUM] = new google.maps.Marker({
-                  map: map,
-                  position: place.geometry.location,
-                  title: place.name,
-                  icon: photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35})
-                });
-                infowindow[placeNUM] = new google.maps.InfoWindow();
-                $("#map_debug").html("<h3>Debugs: initiating the clicking event for marker: </h3>" + String(placeNUM) + " " + place.name);                 
-                // google.maps.event.addListener(marker, 'click', function() {
-                //     infowindow.setContent(place.name);
-                //     infowindow.open(map, this);
-                //     $("#map_debug").html("<h3>Debugs: finishing the clicking event...</h3>"); 
-                // });
-
-                marker[placeNUM].addListener('click', function() {
-                    $("#map_debug").html("<h3>Debugs: clicking marker: </h3>" + String(placeNUM) + " " + place.name); 
-                    infowindow[placeNUM].setContent(place.name);
-                    infowindow[placeNUM].open(map, this);
-                });
+                //after obtaining the detail info for certain places, call the fillFlyers() to fill the flyers 
+                
             }
 
-            function callback(results, status) {
+            // filling the flyers with n places: one place for one flyer, m pictures within one place for one flyer
+            function fillFlyers(places, n, m) {
+                console.log("The count for found places is:" + placeCount);
+                console.log("The count for places that have detail info is:" + detailPlaces.length);
+                var htmlStr;
+                var phoUrl;
+                var idStr;
+                for (var i = 0; i < n; i++) {
+                    //到此。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+
+                    htmlStr='<h6>' + places[i].name+'</h6>';
+                    idStr='#flyer'+ String(i+1)+'-name';
+                    $(idStr).html(htmlStr);                    
+                    console.log(htmlStr);
+                    // console.log(places[i].place_id);
+                    var photos=places[i].photos;
+                    // console.log("The length of photos array for the place NO:" + String(i)+ " is: "+ photos.length);
+                    for (var j = 0; j < m; j++) {
+                        //only a detail place returned by getDetails() could have up to 10 photos, textSearch, searchNearby only return 1 photo
+                        phoUrl=photos[j].getUrl({'maxWidth': 60, 'maxHeight': 60});
+                        htmlStr='<img id="flyer'+ String(i+1)+'-Pic'+String(j+1)+'" class="coverPic" src="'+ phoUrl + '"/>';
+                        idStr='#flyer'+ String(i+1)+'-Div'+ String(j+1);
+                        $(idStr).html(htmlStr);
+                        console.log("Setting the URL for an IMG: " + htmlStr);
+                        // <img id="flyer1-Pic1"  width="80%" />
+                    };
+                    idStr='#flyer'+ String(i+1)+'-a';
+                    // can not treated a jQuery object like a DOM element. jQuery objects don't have a getAttribute method. You can either use .attr or .data instead. $(idStr) is to create an jQuery object based on the DOM element.
+                    $(idStr).on('click',(function(i){
+                                return function (){
+                                    flyerClick=i;
+                                    console.log("flyerClick is set to be: " + flyerClick);
+
+                                }
+                    
+                        })(i));
+
+                 
+
+
+                };
+                // <span id="flyerxx-name">xx</span><a href="#proDetail" >
+                //   <img id="flyerxx-coverPicxx" class="coverPic" src="xx"/>...
+                //   <img id="flyerxx-coverPicxx" class="coverPic" src="xx"/>
+                //  </a>
+                //  
+                    //  marker.addListener('click', (function(marker, i) {
+                    //     return function() {
+                    //         $("#map_debug").html("<h3>Debugs: clicking marker: </h3>" + String(i) + " " + places[i].name); 
+                    //         infowindow.setContent(places[i].name);
+                    //         infowindow.open(map, marker);
+                    //     }
+                    // //to remember each click for i
+                    // })(marker, i));
+
+            }
+
+
+            // filling the product list with recorded flyerClick. flyerClick: record the place index that user click on page #NBList, m pictures within this place
+            function fillProList(places, flyerClick, m) {
+                console.log("filling the product list with the index:" + String(flyerClick));
+                var htmlStr;
+                var phoUrl;
+                var idStr;
+
+                htmlStr='<h4>' + places[flyerClick].name+'</h4>';
+                idStr='#provider-name';
+                $(idStr).html(htmlStr);                    
+                console.log(htmlStr);
+                var photos=places[flyerClick].photos;
+                // console.log("The length of photos array for the place NO:" + String(i)+ " is: "+ photos.length);
+                for (var j = 0; j < m; j++) {
+
+                    phoUrl=photos[j].getUrl({'maxWidth': 100, 'maxHeight': 100});
+                    // htmlStr='<img id="flyer'+ String(i+1)+'-Pic'+String(j+1)+'" class="coverPic" src="'+ phoUrl + '"/>';
+                    idStr='#proPic'+ String(j+1);
+                    $(idStr).attr("src",phoUrl);
+                    console.log("Setting the src for an IMG: " + phoUrl);
+                    // <img id="flyer1-Pic1"  width="80%" />
+                };
+                
+
+            }
+
+
+            function createMarkers(places) {
+                $("#map_debug").html("<h3>Debugs: initiating the createMarker...</h3>");  
+                //firstly create the only one marker for the user's location:                
+                var usermarker = new google.maps.Marker({
+                    map: map,
+                    position: currentLocation,
+                });
+                var userinfowindow = new google.maps.InfoWindow();
+                usermarker.addListener('click', function() {
+                    $("#map_debug").html("<h3>Debugs: clicking usermarker: </h3>"); 
+                    userinfowindow.setContent("Your Location:");
+                    userinfowindow.open(map, this);
+                });                    
+
+                // var placeLoc = place.geometry.location;
+
+                for (var i = 0; i < places.length; i++) {
+                    var marker = new google.maps.Marker({
+                      map: map,
+                      position: places[i].geometry.location,
+                      title: places[i].name,
+                      icon: places[i].photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35})
+                    });
+                    var infowindow = new google.maps.InfoWindow();
+                    $("#map_debug").html("<h3>Debugs: initiating the clicking event for marker: </h3>" + String(i) + " " + places[i].name);
+                    // google.maps.event.addListener(marker, 'click', function() {
+                    //     infowindow.setContent(place.name);
+                    //     infowindow.open(map, this);
+                    //     $("#map_debug").html("<h3>Debugs: finishing the clicking event...</h3>"); 
+                    // });
+                    //very important for distinguish the different marker
+                    marker.addListener('click', (function(marker, i) {
+                        return function() {
+                            $("#map_debug").html("<h3>Debugs: clicking marker: </h3>" + String(i) + " " + places[i].name); 
+                            infowindow.setContent(places[i].name);
+                            infowindow.open(map, marker);
+                        }
+                    //to remember each click for i
+                    })(marker, i));
+
+                };
+
+            }
+
+            //filtering and the original searching results
+            function filterPlaces(places) {
+                var photos;
+                for (var i = 0; i < places.length; i++) {
+                    //filtering condition: only a place that has at least one photo would be stored for futrue use,
+                    //or else continue and process next place
+                    photos = places[i].photos;
+
+                    if (!photos) {
+                        continue;
+                    } else {
+                        // storing the found places for futrue use, like obtaining its detail info and storing into database
+                        placeFound[placeCount]=places[i];   
+                        // placeCount plus 1;
+                        placeCount=placeCount+1;                       
+                        // console.log("In filterPlaces func, the length for place NO: " + String(i) + " is: "+photos.length);
+
+                    }
+
+                };
+                
+            }
+
+
+            function searchCallback(results, status) {
+
                 $("#map_debug").html("<h3>Debugs: initiating the callback...</h3>");    
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     $("#map_debug").html("<h3>Debugs: Places Service Status OK...</h3>"); 
-                    for (var i = 0; i < results.length; i++) {
-                    createMarker(results[i],i);
-                  }
+                    //passing the original searching results to storePlaces
+                    filterPlaces(results);
+                    createMarkers(placeFound);
+                    // looking for flyerNUM=3 places that at least have 6 photos in placeFound list, then call fillFlyers() to filling flyers                    
+                    getPlacesDetail(placeFound, flyerNUM, fillFlyers);
+
                 }; 
                 if (status == google.maps.places.PlacesServiceStatus.ERROR) {
                     $("#map_debug").html("<h3>Debugs: Places Service Status: ERROR...</h3>"); 
-                    // for (var i = 0; i < results.length; i++) {
-                    // createMarker(results[i]);
-                    // }
+
                 };
                 if (status == google.maps.places.PlacesServiceStatus.INVALID_REQUEST) {
                     $("#map_debug").html("<h3>Debugs: Places Service Status:  INVALID_REQUEST...</h3>"); 
@@ -418,7 +762,6 @@
                 if (status == google.maps.places.PlacesServiceStatus.ZERO_RESULTS) {
                     $("#map_debug").html("<h3>Debugs: Places Service Status:  ZERO_RESULTS...</h3>"); 
                 };  
-
 
             }
 
@@ -444,71 +787,116 @@
                     query: 'restaurant'
                 };
 
-                service.textSearch(request, callback);                
+                service.textSearch(request, searchCallback);                
 
             }
-
-            
-            // function onMapReady() {
-            //     // Move to the position with animation
-            //     map.animateCamera({
-            //     target: {lat: 37.422359, lng: -122.084344},
-            //     zoom: 17,
-            //     tilt: 60,
-            //     bearing: 140,
-            //     duration: 5000
-            //     }, function() {
-
-            //     // Add a maker
-            //     map.addMarker({
-            //       position: {lat: 37.422359, lng: -122.084344},
-            //       title: "Welecome to \n" +
-            //              "Cordova GoogleMaps plugin for iOS and Android",
-            //       snippet: "This plugin is awesome!",
-            //       animation: plugin.google.maps.Animation.BOUNCE
-            //     }, function(marker) {
-
-            //       // Show the info window
-            //       marker.showInfoWindow();
-
-            //       // Catch the click event
-            //       marker.on(plugin.google.maps.event.INFO_CLICK, function() {
-
-            //         // To do something...
-            //         alert("Hello world!");
-
-            //       });
-            //     });
-            //     });
-
+            //for futre use, do not remove:
+            // function fadeIn(obj){
+            //     $(obj)
+            //         .css('opacity', 0)
+            //         .show()
+            //         .animate({
+            //             opacity: 1
+            //         }, 2000);
             // }
 
-            $(document).on("pagecreate", "#NBList", function() {
+            //for futre use, do not remove:
+            // function thumbPics(picClass,width,height) {
+            //     if (!width||!height) {
+            //         width='35px';
+            //         height='35px';
+            //     };
+            //     // eg. img.coverPic
+            //     $(picClass).jqthumb({
+            //         classname  : 'jqthumb',          // class name. DEFUALT IS jqthumb
+            //         width      : width,             // new image width after cropping. DEFAULT IS 100px.
+            //         height     : height,             // new image height after cropping. DEFAULT IS 100px.
+            //         position   : {
+            //             x : '50%',                   // x position of the image. DEFAULT is 50%. 50% also means centerize the image.
+            //             y : '50%'                    // y position of the image. DEFAULT is 50%. 50% also means centerize the image.
+            //         },
+            //         source     : 'src',              // to specify the image source attribute. DEFAULT IS src.
+            //         show       : TRUE,              // TRUE = show immediately after processing. FALSE = do not show it. DEFAULT IS TRUE.
+            //         responsive : 20,                 // used by older browsers only. 0 to disable. DEFAULT IS 20
+            //         zoom       : 1,                  // zoom the output, 2 would double of the actual image size. DEFAULT IS 1
+            //         method     : 'auto',             // 3 methods available: "auto", "modern" and "native". DEFAULT IS auto
+            //         before     : function(oriImage){ // callback before each image starts processing.
+            //             console.log("I'm about to start processing now...");
+            //         },
+            //         after      : function(imgObj){   // callback when each image is cropped.
+            //             console.log(imgObj);
+            //         },
+            //         done       : function(imgArray){ // callback when all images are cropped.
+            //             for(i in imgArray){
+            //                 $(imgArray[i]).fadeIn();
+            //             }
+            //         }
+            //     });
+            // 
+            // 
+            // }
 
-                // var div = document.getElementById("map_canvas");
-                // // Initialize the map view
-                // map = plugin.google.maps.Map.getMap(div);
+            
 
-                // // Wait until the map is ready status.
-                // map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
+            function getCurrentLocation(callbackFunc) {
 
+                if (navigator.geolocation) {
+                    $("#map_debug").html("<h3>Debugs: start to get the currentLocation.</h3>");
 
-                //initiating googleMap
-                // console.log("initiating the google map...");
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        currentLocation = {
+                          lat: position.coords.latitude,
+                          lng: position.coords.longitude
+                        };
+                        // $("#map_debug").html("Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude );
+                        $("#map_debug").html("Latitude: " + currentLocation.lat + "<br>Longitude: " + currentLocation.lng );
+                        //when obtaining the currentLocation successfully, callback to initMap()
+                        callbackFunc();
 
-                // if (currentLocation.lat!=null)&&(currentLocation.lng!=null) {
+                    }, function(error) {
+                    switch(error.code) {
+                        case error.PERMISSION_DENIED:
+                            $("#map_debug").html("User denied the request for Geolocation, use default location.");
+                            //when fail to get the currentLocation, callback to initMap() using default location
+                            callbackFunc();                         
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            $("#map_debug").html("Location information is unavailable, use default location.");
+                            callbackFunc();
+                            break;
+                        case error.TIMEOUT:
+                            $("#map_debug").html("The request to get user location timed out, use default location.");
+                            callbackFunc();
+                            break;
+                        case error.UNKNOWN_ERROR:
+                            $("#map_debug").html("An unknown error occurred, use default location.");
+                            callbackFunc();
+                            break;
+                    }                    
+                    // handleLocationError(true, infoWindow, map.getCenter());
+                    });
+                } else {
+                  // Browser doesn't support Geolocation, use the default location
+                  $("#map_debug").html("<h3>Error: Your browser/device doesn\'t support geolocation.</h3>"); 
+                  callbackFunc();
+
+                }
+
+            }
+            //when to create a specified page event:
+            $(document).on("pagebeforeshow", "#proDetail", function() {
+
                 // await sleep(5000);
-                initMap();
-                // };
+                // when loading the #NBList page, set the size of the map_canvas
+                fillProList(detailPlaces, flyerClick, 9);
+
 
             });
 
-            $(document).on("pagebeforeshow", "#NBList", function() {
-                resizeMap();
-            });
 
             //After loading this HTML file, initiating the running environment
             $(document).ready(function(){
+
                 if (jQuery) { 
                     console.log("jQuery has been loaded.");        
                 } else { 
@@ -543,13 +931,13 @@
                     };
 
                 });
-                getCurrentLocation();  //to get the currentLocation firstly
+                getCurrentLocation(initMap);  //to get the currentLocation firstly, when it finished, using initMap callback function to Async-return
+                resizeMap();  // preparing the size to device-height
 
                 // function 2: creating, initiating, updating SQLite database 
 
 
             })
-
 
         </script> 
         <!-- behind the initMap() function -->

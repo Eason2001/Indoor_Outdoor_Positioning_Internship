@@ -42,14 +42,16 @@ function refreshCart(){
 
         newDiv.attr("style","float:left; display:inline")
 
+        //unbind the checkbox event
         var newSpan=newDiv.find("span");  //findall span elements
         newSpan.removeAttr("class");
         newSpan.unbind("click");
         // newSpan.attr("style","display:none"); //hide the span
 
+        //unbind the .img.proPic click event(adding to cart, refreshCnt, flyTocart,refreshCart etc ...)
         var newimg=newDiv.find("img");
         newimg.removeAttr("class");
-        newimg.attr("width","55%");
+        newimg.attr("width","95%");
         newimg.unbind("click");
         // var newspan=newDiv.find("span")[0];
         // newspan.unbind("click");
