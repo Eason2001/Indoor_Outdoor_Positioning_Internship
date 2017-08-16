@@ -29,13 +29,14 @@ function fillSchList(resultList, places, num) {
     var addStr='';
     var idStr='';
 
+    resultList.html("");
     htmlStr='<table align="center" width="100%" class="proTable" border="0" cellspacing="1" cellpadding="4">';                  
     for (var i = 0; i < places.length; i++) {
     // htmlStr='<a id="schPlace'+String(i+1)+'-a" href="#mapLocation"><table align="center" width="100%" class="proTable" border="0" cellspacing="1" cellpadding="0"><tr><td class="contentRow"><h6>(';                  
         htmlStr=htmlStr+'<tr><td class="contentRow"><a id="schPlace'+String(i+1)+'-a" href="#mapLocation"><h6>(';
 
         
-        htmlStr=htmlStr+String(i+1)+').'+processName(places[i].name)+'</h6></a></td><td class="contentRow">'+'<img src="';
+        htmlStr=htmlStr+String(i+1)+').'+places[i].name.substr(0,15)+'</h6></a></td><td class="contentRow">'+'<img src="';
         phoUrl=places[i].photos[0].getUrl({'maxWidth': 40, 'maxHeight': 40});
         addStr=places[i].formatted_address;
         htmlStr=htmlStr+phoUrl+'" /></td><td class="contentRow"><h6>'+addStr;
@@ -352,6 +353,9 @@ function createMarkers(places) {
 //filtering the original searching results
 function filterPlaces(oriResults, newResults, newResultsCNT) {
     var photos;
+    //empty the target variables
+    newResultsCNT=0;
+    newResults.splice(0,1);
     for (var i = 0; i < oriResults.length; i++) {
         //filtering condition: only a place that has at least one photo would be stored for futrue use,
         //or else continue and process next place
