@@ -83,15 +83,13 @@
                 <label id="map_debug"></label>
                 <p>NEARBY FLYERS </p>
                     <div>
-
-                        <table>
-                            <tr>
-                                <td>
+                        <div class="ui-grid-b">
+                          <div class="ui-block-a">
                                     <a id="flyer1-a" href="#proDetail" >
-                                    <table class="proTable" border="0" cellspacing="1" cellpadding="0">
+                                    <table id="flyer1-t" class="proTable" border="0" cellspacing="1" cellpadding="0" >
                                       <tbody>
                                         <tr>
-                                          <td class="topRow"><span id="flyer1-name"></span></td>
+                                          <td class="topRow" ><span id="flyer1-name"></span></td>
                                         </tr>
                                         <tr>
                                           <td class="contentRow"> 
@@ -145,17 +143,13 @@
 
                                           </td>
                                         </tr>
-                                        <tr>
-                                          <td class="bottomRow"></td>
-                                        </tr>
                                       </tbody>
                                     </table>                                    
                                     </a>
-                                
-                                </td> 
-                                <td>
+                                    </div>
+                          <div class="ui-block-b">
                                     <a id="flyer2-a" href="#proDetail" >
-                                    <table class="proTable" border="0" cellspacing="1" cellpadding="0">
+                                    <table id="flyer2-t" class="proTable" border="0" cellspacing="1" cellpadding="0">
                                       <tbody>
                                         <tr>
                                           <td class="topRow"><span id="flyer2-name"></span></td>
@@ -211,17 +205,12 @@
 
                                           </td>
                                         </tr>
-                                        <tr>
-                                          <td class="bottomRow"></td>
-                                        </tr>
                                       </tbody>
                                     </table>                                      
-                                    </a>
-
-                                </td> 
-                                <td>
+                                    </a></div>
+                          <div class="ui-block-c">
                                     <a id="flyer3-a" href="#proDetail" >
-                                    <table class="proTable" border="0" cellspacing="1" cellpadding="0">
+                                    <table id="flyer3-t" class="proTable" border="0" cellspacing="1" cellpadding="0">
                                       <tbody>
                                         <tr>
                                           <td class="topRow"><span id="flyer3-name"></span></td>
@@ -277,16 +266,11 @@
 
                                           </td>
                                         </tr>
-                                        <tr>
-                                          <td class="bottomRow"></td>
-                                        </tr>
+
                                       </tbody>
                                     </table>      
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                                              
+                                    </a></div>
+                        </div>                                              
                     </div>
             </div>
             <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
@@ -345,18 +329,19 @@
             </div>
 
             <div data-role="content" data-theme="e">
-                <p>Welcome to search page.</p>
+                    <span id="searchHits">Plear enter key works at the bottom: </span>
+                    <div id="resultList">
+
+                    </div>
             </div>
 
             <div data-role="footer" data-theme="e" data-position="fixed" data-tap-toggle="false">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#" data-icon="tag" class="ui-btn-active">Browse</a></li>
-                        <li><a href="#" data-icon="comment">Discount</a></li>
-                        <li><a href="#spCart" data-icon="shop">Cart
-                        <span id="Counter4" class="ui-li-count" display="block">0</span></a></li>
-                        <li><a href="#" data-icon="user">Account</a></li>
-                    </ul>
+                <div data-role="navbar">                    
+                        <ul>
+                            <li>
+                                <input id="keyWord" type="search" data-mini="true" value="" placeholder="Enter key words..."/>
+                            </li>
+                        </ul>                                                
                 </div>            
             </div>
         </div>
@@ -490,9 +475,6 @@
 
                               </td>
                             </tr>
-                            <tr>
-                              <td class="bottomRow"></td>
-                            </tr>
                           </tbody>
                         </table>
 
@@ -525,12 +507,23 @@
             });
 
             //when to create a specified page event:
+            $(document).on("pagebeforeshow", "#Search", function() {
+
+                // await sleep(5000);
+                // when loading the #NBList page, set the size of the map_canvas
+                // adding the input event for input search on Search page:
+                $( "#keyWord" ).on( "keydown", key_press);
+
+
+            });
+
+
+            //when to create a specified page event:
             $(document).on("pageshow", "#NBList", function() {
 
                 //fixing the bug: for the first time loading map, it only display partially
                 // before refresh the map, need to check if the map has already been created
                 refreshMap();
-
 
             });
 
@@ -564,7 +557,7 @@
                         // console.log(count);
                         refreshCnt(count);
                         //find只找匹配项下面的子项
-                        var imgPath = $(this).attr('src'); 
+                        var imgPath = $(this).attr('src');
                         console.log(imgPath);
                         flyTocart(imgPath,event);                    
                         refreshCart();
@@ -574,9 +567,7 @@
                 });
                 getCurrentLocation(initMap);  //to get the currentLocation firstly, when it finished, using initMap callback function to Async-return
                 resizeMap();  // preparing the size to device-height
-
                 // function 2: creating, initiating, updating SQLite database 
-
 
             })
 

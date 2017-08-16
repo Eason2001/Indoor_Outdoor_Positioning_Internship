@@ -5,15 +5,132 @@ var appDB;
 var currentLocation={lat: 42.304672, lng: -83.062009}; 
 var map;
 var service;
+//used to store places for NBList page:
 var placeFound=[];  //used to store the suitable places after filtering the original searching results
-var placeCount=0;
+var placeCount=0;   //the count of the suitable places above
 // the placeFound and placeFound_Detail are different: placeFound is a list of places, 
 var flyerNUM=3;  //it has to be matched with the number of flyers in #NBList page, means to get 3 places detail info 
 var detailPlaces=[]; //used to store the detail info for these 3 places mentioned above
 var detailPlacesCnt=0; //used to count the detailPlaces
 var flyerClick=0; //used to record the index of a place that user clicked, default set to 0
 
-//----------------------for integrating google map API---------------------------
+//used to store places for Search page:
+var placeSchList=[];
+var placeSchListCnt=0;
+var schPlaceClick=0; //used to record the index of a place that user clicked in Search Page, default set to 0
+
+//----------------------for integrating google map API: Search page---------------------------
+
+// filling the searching list in Search page with places. num is the count of colums for each place
+function fillSchList(resultList, places, num) {
+    console.log("filling the resultList with the placeSchList:");
+    var htmlStr='';
+    var phoUrl='';
+    var addStr='';
+    var idStr='';
+
+    htmlStr='<table align="center" width="100%" class="proTable" border="0" cellspacing="1" cellpadding="4">';                  
+    for (var i = 0; i < places.length; i++) {
+    // htmlStr='<a id="schPlace'+String(i+1)+'-a" href="#mapLocation"><table align="center" width="100%" class="proTable" border="0" cellspacing="1" cellpadding="0"><tr><td class="contentRow"><h6>(';                  
+        htmlStr=htmlStr+'<tr><td class="contentRow"><a id="schPlace'+String(i+1)+'-a" href="#mapLocation"><h6>(';
+
+        
+        htmlStr=htmlStr+String(i+1)+').'+processName(places[i].name)+'</h6></a></td><td class="contentRow">'+'<img src="';
+        phoUrl=places[i].photos[0].getUrl({'maxWidth': 40, 'maxHeight': 40});
+        addStr=places[i].formatted_address;
+        htmlStr=htmlStr+phoUrl+'" /></td><td class="contentRow"><h6>'+addStr;
+        htmlStr=htmlStr+'</h6></td></tr>';
+        console.log(htmlStr);
+
+        idStr='#schPlace'+ String(i+1)+'-a';
+        $(idStr).on('click',(function(i){
+                    return function (){
+                        schPlaceClick=i;
+                        console.log("schPlaceClick is set to be: " + schPlaceClick);
+
+                    }
+        
+            })(i));
+     
+
+    };
+    htmlStr=htmlStr+'</table>';                  
+    resultList.html(htmlStr);
+    $("#searchHits").html("<h3>Searching results: "+ String(i) +" places found.</h3>");    
+    
+}
+
+
+function searchReturn(results, status) {
+
+    $("#searchHits").html("<h3>Debugs: initiating the callback...</h3>");    
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        $("#searchHits").html("<h3>Debugs: Places Service Status OK...</h3>"); 
+        //passing the original searching results to filter and store new Places
+        filterPlaces(results, placeSchList, placeSchListCnt);
+        resList=$("#resultList");
+        fillSchList(resList, placeSchList,3);
+
+    }; 
+    if (status == google.maps.places.PlacesServiceStatus.ERROR) {
+        $("#searchHits").html("<h3>Debugs: Places Service Status: ERROR...</h3>"); 
+
+    };
+    if (status == google.maps.places.PlacesServiceStatus.INVALID_REQUEST) {
+        $("#searchHits").html("<h3>Debugs: Places Service Status:  INVALID_REQUEST...</h3>"); 
+    };
+    if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
+        $("#searchHits").html("<h3>Debugs: Places Service Status: OVER_QUERY_LIMIT...</h3>"); 
+    };
+
+    if (status == google.maps.places.PlacesServiceStatus.REQUEST_DENIED) {
+        $("#searchHits").html("<h3>Debugs: Places Service Status:  REQUEST_DENIED...</h3>"); 
+    };
+
+    if (status == google.maps.places.PlacesServiceStatus.UNKNOWN_ERROR) {
+        $("#searchHits").html("<h3>Debugs: Places Service Status:  UNKNOWN_ERROR...</h3>"); 
+    }; 
+    
+    if (status == google.maps.places.PlacesServiceStatus.ZERO_RESULTS) {
+        $("#searchHits").html("<h3>Debugs: Places Service Status:  ZERO_RESULTS...</h3>"); 
+    };  
+
+}
+
+
+function nSearch(keyWords) {
+
+    if (!map) {
+        $("#searchHits").html("Error: application can not obtain your <br>"+"location, try it again and ensure that"+"<br>"+"your browser supports HTML5 and "+"<br>"+"cellphone supports GPS navigator.");
+        return;
+    };
+
+    if (!keyWords) {
+        $("#searchHits").html("Error: please enter the key words.<br>");
+        return;
+    };
+    //reusing the google map created in the NearBy page
+    var nService = new google.maps.places.PlacesService(map);
+    var request = {
+        location: currentLocation,
+        radius: '500',
+        query: keyWords
+    };
+
+    nService.textSearch(request, searchReturn);                
+
+}
+
+//the input event for input search on Search page:
+function key_press(event) {
+    if(event.keyCode == '13') {
+        var keyWords = document.getElementById("keyWord").value;
+        nSearch(keyWords);
+    }
+}
+
+
+//----------------------for integrating google map API: NearBy page-------------------------
 
 //fixing the bug: for the first time loading map, it only display partially
 // before refresh the map, need to check if the map has already been created
@@ -38,6 +155,33 @@ function resizeMap() {
 
 }
 
+function initFlyers() {
+    // setting the height for flyers
+    $("#flyer1-t").attr("height", "220px");
+    $("#flyer2-t").attr("height", "220px");
+    $("#flyer3-t").attr("height", "220px");
+}
+// used to process the name of a place that is too long
+function processName(nameStr) {
+    var newnameStr='';
+    var offset;
+
+    if (nameStr.length>15) {
+        newnameStr=nameStr.substr(0,15);
+        return newnameStr;
+
+    } else {
+        offset=15-nameStr.length;
+        newnameStr=nameStr;
+        for (var i = 0; i < offset; i++) {
+            newnameStr=newnameStr+'&nbsp;';
+        };
+        return newnameStr;
+
+    };
+
+
+}
 
 // filling the flyers with n places: one place for one flyer, m pictures within one place for one flyer
 function fillFlyers(places, n, m) {
@@ -46,10 +190,12 @@ function fillFlyers(places, n, m) {
     var htmlStr;
     var phoUrl;
     var idStr;
+    // setting the height for flyers
+    initFlyers();
     for (var i = 0; i < n; i++) {
         //到此。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
-
-        htmlStr='<h6>' + places[i].name+'</h6>';
+        //substr() to limit the length of the name of a place for saving space
+        htmlStr='<h6>' + processName(places[i].name) + '</h6>';
         idStr='#flyer'+ String(i+1)+'-name';
         $(idStr).html(htmlStr);                    
         console.log(htmlStr);
@@ -58,7 +204,7 @@ function fillFlyers(places, n, m) {
         // console.log("The length of photos array for the place NO:" + String(i)+ " is: "+ photos.length);
         for (var j = 0; j < m; j++) {
             //only a detail place returned by getDetails() could have up to 10 photos, textSearch, searchNearby only return 1 photo
-            phoUrl=photos[j].getUrl({'maxWidth': 60, 'maxHeight': 60});
+            phoUrl=photos[j].getUrl({'maxWidth': 40, 'maxHeight': 40});
             htmlStr='<img id="flyer'+ String(i+1)+'-Pic'+String(j+1)+'" class="coverPic" src="'+ phoUrl + '"/>';
             idStr='#flyer'+ String(i+1)+'-Div'+ String(j+1);
             $(idStr).html(htmlStr);
@@ -77,8 +223,6 @@ function fillFlyers(places, n, m) {
             })(i));
 
      
-
-
     };
     // <span id="flyerxx-name">xx</span><a href="#proDetail" >
     //   <img id="flyerxx-coverPicxx" class="coverPic" src="xx"/>...
@@ -205,21 +349,21 @@ function createMarkers(places) {
 
 }
 
-//filtering and the original searching results
-function filterPlaces(places) {
+//filtering the original searching results
+function filterPlaces(oriResults, newResults, newResultsCNT) {
     var photos;
-    for (var i = 0; i < places.length; i++) {
+    for (var i = 0; i < oriResults.length; i++) {
         //filtering condition: only a place that has at least one photo would be stored for futrue use,
         //or else continue and process next place
-        photos = places[i].photos;
+        photos = oriResults[i].photos;
 
         if (!photos) {
             continue;
         } else {
             // storing the found places for futrue use, like obtaining its detail info and storing into database
-            placeFound[placeCount]=places[i];   
+            newResults[newResultsCNT]=oriResults[i];
             // placeCount plus 1;
-            placeCount=placeCount+1;                       
+            newResultsCNT=newResultsCNT+1;
             // console.log("In filterPlaces func, the length for place NO: " + String(i) + " is: "+photos.length);
 
         }
@@ -234,8 +378,8 @@ function searchCallback(results, status) {
     $("#map_debug").html("<h3>Debugs: initiating the callback...</h3>");    
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         $("#map_debug").html("<h3>Debugs: Places Service Status OK...</h3>"); 
-        //passing the original searching results to storePlaces
-        filterPlaces(results);
+        //passing the original searching results to filter and store new Places
+        filterPlaces(results, placeFound, placeCount);
         createMarkers(placeFound);
         // looking for flyerNUM=3 places that at least have 6 photos in placeFound list, then call fillFlyers() to filling flyers                    
         getPlacesDetail(placeFound, flyerNUM, fillFlyers);
