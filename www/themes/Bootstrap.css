@@ -1241,16 +1241,17 @@ button[disabled],
 
 }
 .topRow{
-    background:#ec742d
-
+    background:#ec742d;
+	padding-top:0px;
+	text-align:center;
 }
 .contentRow{
-    background:#FFF
-
+    background:#FFF;
+	text-align:center;
 }
 
 #keyWord{
-	width: 80%
+	width: 75%
 
 }
 

@@ -1,5 +1,5 @@
 //----------------------for global setting/variables---------------------------
-var count = 0;
+var count = 0;   //the number of items that would be placed in the shopping cart
 var appDB;
 //use default location when it is not allowed to access user's location
 var currentLocation={lat: 42.304672, lng: -83.062009}; 
@@ -157,30 +157,33 @@ function resizeMap() {
 }
 
 function initFlyers() {
-    // setting the height for flyers
-    $("#flyer1-t").attr("height", "220px");
-    $("#flyer2-t").attr("height", "220px");
-    $("#flyer3-t").attr("height", "220px");
+    // setting the height and width for flyers, they can decide 
+    var flyerWidth = window.innerWidth *0.25;
+    var styleStr = "height:150px;width:" + flyerWidth + "px";
+
+    $("#flyer1-t").attr("style", styleStr);
+    $("#flyer2-t").attr("style", styleStr);
+    $("#flyer3-t").attr("style", styleStr);
 }
 // used to process the name of a place that is too long
+// reserved for the future, do not remove:
 function processName(nameStr) {
     var newnameStr='';
     var offset;
 
     if (nameStr.length>15) {
         newnameStr=nameStr.substr(0,15);
-        return newnameStr;
 
     } else {
         offset=15-nameStr.length;
         newnameStr=nameStr;
         for (var i = 0; i < offset; i++) {
+            // "&nbsp;", code for namespace 
             newnameStr=newnameStr+'&nbsp;';
         };
-        return newnameStr;
 
     };
-
+    return newnameStr;
 
 }
 
@@ -196,7 +199,7 @@ function fillFlyers(places, n, m) {
     for (var i = 0; i < n; i++) {
         //到此。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
         //substr() to limit the length of the name of a place for saving space
-        htmlStr='<h6>' + processName(places[i].name) + '</h6>';
+        htmlStr='<h6>' + places[i].name.substr(0,15) + '</h6>';
         idStr='#flyer'+ String(i+1)+'-name';
         $(idStr).html(htmlStr);                    
         console.log(htmlStr);
@@ -205,7 +208,7 @@ function fillFlyers(places, n, m) {
         // console.log("The length of photos array for the place NO:" + String(i)+ " is: "+ photos.length);
         for (var j = 0; j < m; j++) {
             //only a detail place returned by getDetails() could have up to 10 photos, textSearch, searchNearby only return 1 photo
-            phoUrl=photos[j].getUrl({'maxWidth': 40, 'maxHeight': 40});
+            phoUrl=photos[j].getUrl({'maxWidth': 35, 'maxHeight': 35});
             htmlStr='<img id="flyer'+ String(i+1)+'-Pic'+String(j+1)+'" class="coverPic" src="'+ phoUrl + '"/>';
             idStr='#flyer'+ String(i+1)+'-Div'+ String(j+1);
             $(idStr).html(htmlStr);
@@ -488,7 +491,7 @@ function getCurrentLocation(callbackFunc) {
 }
 
 //-----------------------------for picture processing----------------------------------
-//for futre use, do not remove:
+// reserved for the future, do not remove:
 // function fadeIn(obj){
 //     $(obj)
 //         .css('opacity', 0)
@@ -498,7 +501,7 @@ function getCurrentLocation(callbackFunc) {
 //         }, 2000);
 // }
 
-//for futre use, do not remove:
+// reserved for the future, do not remove:
 // function thumbPics(picClass,width,height) {
 //     if (!width||!height) {
 //         width='35px';
@@ -536,7 +539,7 @@ function getCurrentLocation(callbackFunc) {
 
 
 //-----------------------------for shopping cart----------------------------------
-//Customizaed functions used for loading the HTML DOM
+
 function refreshCnt(cnt){
     $("#Counter1").text(String(cnt));
     $("#Counter2").text(String(cnt));
@@ -600,6 +603,7 @@ function refreshCart(){
 }
 
 //-----------------------------for local database----------------------------------
+// reserved for the future, do not remove:
 function CreatOpenDB(){
     appDB = openDatabase('appDB', '1.0', 'Local_App_DB', 2 * 1024 * 1024);
 
